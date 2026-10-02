@@ -17,13 +17,13 @@
 <body>
 
 <h1>RallyStat — Privacy Policy</h1>
-<p class="muted">Effective date: 2026-07-13 · Developer: SynIna Soft</p>
+<p class="muted">Effective date: 2026-10-03 (previous version: 2026-07-13) · Developer: SynIna Soft</p>
 
 <h2>The short version</h2>
-<p><strong>RallyStat stores your data on your device.</strong> Everything you record — teams, players, matches, statistics — lives in a local database. There are no accounts, no analytics, no ads, and no tracking. The only exceptions are two <em>optional</em> sharing features (live broadcast and co-recording): while you have them switched on, scoreboard data for that match is sent to our server so others can view or help record, and it is deleted when you switch sharing off.</p>
+<p><strong>RallyStat stores your data on your device.</strong> Everything you record — teams, players, matches, statistics — lives in a local database. There are no accounts, no ads, and no cross-app tracking. Your names, rosters and match data stay on your device, except in two <em>optional</em> sharing features (live broadcast and co-recording): while you have them switched on, scoreboard data for that match is sent to our server so others can view or help record, and it is deleted when you switch sharing off. To keep the app working and improve it, the app also sends <strong>anonymous usage statistics and crash reports</strong> that never contain your names or match data (see below).</p>
 
 <h2>Data stored on your device</h2>
-<p>Match records, team rosters, player names and numbers, and app settings are saved in a local database on your device. This data does not leave your device unless you explicitly export it (CSV, PDF, or backup file), share it yourself, or enable the optional sharing features described below. Your device's standard backup (e.g. iCloud backup) may include the app's data, under Apple's terms.</p>
+<p>Match records, team rosters, player names and numbers, and app settings are saved in a local database on your device. This data does not leave your device unless you explicitly export it (CSV, PDF, or backup file), share it yourself, or enable the optional sharing features described below. Your device's standard backup (e.g. iCloud backup or Google backup) may include the app's data, under Apple's or Google's terms.</p>
 
 <h2>Optional online features: live broadcast &amp; co-recording</h2>
 <p>If you turn on <strong>live broadcast</strong> or <strong>co-recording</strong> for a match, the app transmits that match's scoreboard data to our server (hosted on Supabase) so that people with the share code can watch the live scoreboard or help record: team names, scores and set results, statistics, player display labels, and — for co-recording — the helper's self-chosen recorder nickname.</p>
@@ -34,19 +34,34 @@
   <li>No account is created; access to shared data requires the randomly generated share code.</li>
 </ul>
 
+<h2>Anonymous usage statistics</h2>
+<p>The app uses <strong>PostHog</strong> (servers in the United States) to count how features are used, so we can see what helps coaches and fix what doesn't. It sends:</p>
+<ul>
+  <li>a random identifier generated on your device (not linked to your name, email, or any account);</li>
+  <li>which screens are opened and which features are used (for example "match started", "report shared", "paywall viewed"), with technical details such as the match format or the app version;</li>
+  <li>device type, operating system and version, app version, and an approximate location (country/region) that PostHog derives from your IP address.</li>
+</ul>
+<p>It <strong>never</strong> sends team names, player names or numbers, scores, statistics, or any other content you record. This data is used only to improve RallyStat; it is not sold, not used for advertising, and not combined with data from other apps. See <a href="https://posthog.com/privacy">PostHog's privacy policy</a>.</p>
+
+<h2>Crash reports</h2>
+<p>If the app crashes or hits an error, it sends a diagnostic report to <strong>Sentry</strong> (servers in the United States): the error message and code location, device model, operating system and app version, and a small sample of performance timings. Reports are configured not to include personal information, and never include your recorded data. See <a href="https://sentry.io/privacy/">Sentry's privacy policy</a>.</p>
+
 <h2>Data we do NOT collect</h2>
 <ul>
   <li>No account, email, or sign-up of any kind</li>
-  <li>No analytics or usage tracking</li>
-  <li>No advertising or advertising identifiers</li>
-  <li>No location, contacts, camera, or photo access</li>
+  <li>No advertising, advertising identifiers, or cross-app tracking</li>
+  <li>No precise location, contacts, camera, or photo access</li>
+  <li>No names, rosters, scores, or match records in analytics or crash reports</li>
 </ul>
 
 <h2>In-app purchases</h2>
-<p>If you purchase RallyStat Pro, the payment is processed entirely by Apple. To validate and restore your purchase, the app uses RevenueCat, a purchase-management service. RevenueCat receives an anonymous, randomly generated identifier and your purchase status — never your name, email, or match data. See <a href="https://www.revenuecat.com/privacy">RevenueCat's privacy policy</a>.</p>
+<p>If you purchase RallyStat Pro, the payment is processed entirely by Apple (App Store) or Google (Google Play). To validate and restore your purchase, the app uses RevenueCat, a purchase-management service. RevenueCat receives an anonymous, randomly generated identifier and your purchase status — never your name, email, or match data. See <a href="https://www.revenuecat.com/privacy">RevenueCat's privacy policy</a>.</p>
 
 <h2>Children's privacy</h2>
 <p>RallyStat is a tool for coaches and players and does not knowingly collect any personal information from anyone, including children. Player names entered by a coach stay on the coach's device unless the coach turns on the optional sharing features above — in which case player display labels default to jersey numbers only, and the shared data is deleted as soon as sharing is turned off.</p>
+
+<h2>Your choices and deletion</h2>
+<p>You can delete all of your recorded data at any time by deleting matches in the app, using Settings → Reset data, or uninstalling the app. Shared scoreboard data is deleted when you turn sharing off. To ask us to delete usage statistics or crash reports associated with your device, email us; because we do not know who you are, please tell us roughly when and on what device you used the app.</p>
 
 <h2>Changes</h2>
 <p>If this policy changes, the updated version will be posted at this URL with a new effective date.</p>
@@ -57,13 +72,13 @@
 <div class="lang-divider"></div>
 
 <h1>RallyStat — 개인정보처리방침</h1>
-<p class="muted">시행일: 2026-07-13 · 개발사: SynIna Soft</p>
+<p class="muted">시행일: 2026-10-03 (이전 판: 2026-07-13) · 개발사: SynIna Soft</p>
 
 <h2>요약</h2>
-<p><strong>RallyStat의 데이터는 사용자의 기기에 저장됩니다.</strong> 기록하는 모든 것(팀, 선수, 경기, 통계)은 기기 내 로컬 데이터베이스에 보관되며, 계정·분석 도구·광고·추적이 전혀 없습니다. 유일한 예외는 <em>선택 기능</em>인 라이브 중계와 공동 기록 두 가지로, 켜 둔 동안에만 해당 경기의 점수판 데이터가 서버로 전송되고 끄면 즉시 삭제됩니다.</p>
+<p><strong>RallyStat의 데이터는 사용자의 기기에 저장됩니다.</strong> 기록하는 모든 것(팀, 선수, 경기, 통계)은 기기 내 로컬 데이터베이스에 보관되며, 계정·광고·앱 간 추적이 없습니다. 이름·명단·경기 데이터가 기기 밖으로 나가는 경우는 <em>선택 기능</em>인 라이브 중계와 공동 기록뿐으로, 켜 둔 동안에만 해당 경기의 점수판 데이터가 서버로 전송되고 끄면 즉시 삭제됩니다. 이와 별도로 앱의 안정성과 개선을 위해 이름이나 경기 데이터를 담지 않은 <strong>익명 사용 통계와 오류 보고</strong>를 보냅니다(아래 참조).</p>
 
 <h2>기기에 저장되는 데이터</h2>
-<p>경기 기록, 팀 명단, 선수 이름·등번호, 앱 설정은 기기 내 로컬 데이터베이스에 저장됩니다. 사용자가 직접 내보내기(CSV, PDF, 백업 파일)를 실행해 공유하거나 아래의 선택 공유 기능을 켜지 않는 한 이 데이터는 기기를 떠나지 않습니다. 기기의 표준 백업(예: iCloud 백업)에는 Apple의 약관에 따라 앱 데이터가 포함될 수 있습니다.</p>
+<p>경기 기록, 팀 명단, 선수 이름·등번호, 앱 설정은 기기 내 로컬 데이터베이스에 저장됩니다. 사용자가 직접 내보내기(CSV, PDF, 백업 파일)를 실행해 공유하거나 아래의 선택 공유 기능을 켜지 않는 한 이 데이터는 기기를 떠나지 않습니다. 기기의 표준 백업(예: iCloud 백업, Google 백업)에는 Apple 또는 Google의 약관에 따라 앱 데이터가 포함될 수 있습니다.</p>
 
 <h2>선택 온라인 기능: 라이브 중계·공동 기록</h2>
 <p>특정 경기에 <strong>라이브 중계</strong> 또는 <strong>공동 기록</strong>을 켜면, 공유 코드를 아는 사람이 실시간 상황판을 보거나 기록을 도울 수 있도록 그 경기의 점수판 데이터가 서버(Supabase 호스팅)로 전송됩니다: 팀 이름, 점수·세트 결과, 스탯, 선수 표시명, 그리고 공동 기록의 경우 보조 기록자가 스스로 정한 기록자 이름.</p>
@@ -74,19 +89,34 @@
   <li>계정은 만들어지지 않으며, 공유 데이터 접근에는 무작위로 생성된 공유 코드가 필요합니다.</li>
 </ul>
 
+<h2>익명 사용 통계</h2>
+<p>코치에게 도움이 되는 기능과 고칠 점을 알기 위해 <strong>PostHog</strong>(미국 서버)로 기능 사용 횟수를 집계합니다. 보내는 정보는 다음과 같습니다.</p>
+<ul>
+  <li>기기에서 무작위로 만든 식별자(이름·이메일·계정과 연결되지 않음)</li>
+  <li>어떤 화면을 열고 어떤 기능을 썼는지(예: 경기 시작, 리포트 공유, Pro 화면 조회)와 경기 방식·앱 버전 같은 기술 정보</li>
+  <li>기기 종류, 운영체제와 버전, 앱 버전, 그리고 PostHog가 IP 주소로 추정하는 대략적인 위치(국가·지역)</li>
+</ul>
+<p>팀 이름, 선수 이름·등번호, 점수, 스탯 등 사용자가 기록한 내용은 <strong>절대</strong> 보내지 않습니다. 이 정보는 RallyStat 개선에만 쓰며, 판매하거나 광고에 쓰거나 다른 앱의 데이터와 결합하지 않습니다. <a href="https://posthog.com/privacy">PostHog 개인정보처리방침</a>을 참고하세요.</p>
+
+<h2>오류 보고</h2>
+<p>앱이 비정상 종료되거나 오류가 나면 진단 보고서를 <strong>Sentry</strong>(미국 서버)로 보냅니다. 오류 메시지와 코드 위치, 기기 모델, 운영체제와 앱 버전, 일부 성능 측정값이 담깁니다. 개인정보를 포함하지 않도록 설정되어 있으며, 기록한 데이터는 담기지 않습니다. <a href="https://sentry.io/privacy/">Sentry 개인정보처리방침</a>을 참고하세요.</p>
+
 <h2>수집하지 않는 것</h2>
 <ul>
   <li>계정·이메일·가입 절차 없음</li>
-  <li>분석·사용 추적 없음</li>
-  <li>광고·광고 식별자 없음</li>
-  <li>위치·연락처·카메라·사진 접근 없음</li>
+  <li>광고·광고 식별자·앱 간 추적 없음</li>
+  <li>정밀 위치·연락처·카메라·사진 접근 없음</li>
+  <li>사용 통계와 오류 보고에 이름·명단·점수·경기 기록 없음</li>
 </ul>
 
 <h2>인앱 구매</h2>
-<p>RallyStat Pro를 구매하는 경우 결제는 전적으로 Apple이 처리합니다. 구매 확인·복원을 위해 구매 관리 서비스인 RevenueCat을 사용하며, RevenueCat은 무작위로 생성된 익명 식별자와 구매 상태만 전달받습니다. 이름, 이메일, 경기 데이터는 절대 전달되지 않습니다. <a href="https://www.revenuecat.com/privacy">RevenueCat 개인정보처리방침</a>을 참고하세요.</p>
+<p>RallyStat Pro를 구매하는 경우 결제는 전적으로 Apple(App Store) 또는 Google(Google Play)이 처리합니다. 구매 확인·복원을 위해 구매 관리 서비스인 RevenueCat을 사용하며, RevenueCat은 무작위로 생성된 익명 식별자와 구매 상태만 전달받습니다. 이름, 이메일, 경기 데이터는 절대 전달되지 않습니다. <a href="https://www.revenuecat.com/privacy">RevenueCat 개인정보처리방침</a>을 참고하세요.</p>
 
 <h2>아동의 개인정보</h2>
 <p>RallyStat은 코치와 선수를 위한 도구이며, 아동을 포함한 누구의 개인정보도 의도적으로 수집하지 않습니다. 코치가 입력한 선수 이름은 위의 선택 공유 기능을 켜지 않는 한 코치의 기기에만 남습니다. 공유를 켜더라도 선수 표시는 기본적으로 등번호만이며, 공유를 끄는 즉시 서버 데이터가 삭제됩니다.</p>
+
+<h2>선택과 삭제</h2>
+<p>앱에서 경기를 삭제하거나 설정 → 데이터 초기화를 실행하거나 앱을 삭제하면 기록한 데이터는 언제든 모두 지울 수 있습니다. 공유된 점수판 데이터는 공유를 끄면 삭제됩니다. 기기와 연결된 사용 통계·오류 보고의 삭제를 원하시면 이메일로 요청해 주세요. 저희는 사용자가 누구인지 모르므로 앱을 사용한 대략적인 시기와 기기를 알려 주시면 됩니다.</p>
 
 <h2>변경</h2>
 <p>본 방침이 변경되면 새 시행일과 함께 이 주소에 게시됩니다.</p>
