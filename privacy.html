@@ -17,7 +17,7 @@
 <body>
 
 <h1>RallyStat — Privacy Policy</h1>
-<p class="muted">Effective date: 2026-10-03 (previous version: 2026-07-13) · Developer: SynIna Soft</p>
+<p class="muted">Effective date: 2026-10-25 (previous version: 2026-10-03) · Developer: SynIna Soft</p>
 
 <h2>The short version</h2>
 <p><strong>RallyStat stores your data on your device.</strong> Everything you record — teams, players, matches, statistics — lives in a local database. There are no accounts, no ads, and no cross-app tracking. Your names, rosters and match data stay on your device, except in two <em>optional</em> sharing features (live broadcast and co-recording): while you have them switched on, scoreboard data for that match is sent to our server so others can view or help record, and it is deleted when you switch sharing off. To keep the app working and improve it, the app also sends <strong>anonymous usage statistics and crash reports</strong> that never contain your names or match data (see below).</p>
@@ -26,7 +26,7 @@
 <p>Match records, team rosters, player names and numbers, and app settings are saved in a local database on your device. This data does not leave your device unless you explicitly export it (CSV, PDF, or backup file), share it yourself, or enable the optional sharing features described below. Your device's standard backup (e.g. iCloud backup or Google backup) may include the app's data, under Apple's or Google's terms.</p>
 
 <h2>Optional online features: live broadcast &amp; co-recording</h2>
-<p>If you turn on <strong>live broadcast</strong> or <strong>co-recording</strong> for a match, the app transmits that match's scoreboard data to our server (hosted on Supabase) so that people with the share code can watch the live scoreboard or help record: team names, scores and set results, statistics, player display labels, and — for co-recording — the helper's self-chosen recorder nickname.</p>
+<p>If you turn on <strong>live broadcast</strong> or <strong>co-recording</strong> for a match, the app transmits that match's scoreboard data to our server (hosted on Supabase, servers in Seoul, South Korea) so that people with the share code can watch the live scoreboard or help record: team names, scores and set results, statistics, player display labels, and — for co-recording — the helper's self-chosen recorder nickname.</p>
 <ul>
   <li>Both features are <strong>off by default</strong> and apply per match.</li>
   <li>Player display labels are <strong>jersey numbers only by default</strong>; sending numbers together with names is an explicit per-match choice you make in the sharing settings.</li>
@@ -39,23 +39,36 @@
 <ul>
   <li>a random identifier generated on your device (not linked to your name, email, or any account);</li>
   <li>which screens are opened and which features are used (for example "match started", "report shared", "paywall viewed"), with technical details such as the match format or the app version;</li>
-  <li>device type, operating system and version, app version, and an approximate location (country/region) that PostHog derives from your IP address.</li>
+  <li>device type, operating system and version, app version, and the device's language and region settings (for example, en, US).</li>
 </ul>
+<p>Your IP address is not stored and no location is collected — country comes only from the device's region setting. Usage statistics are kept for 1 year and then deleted.</p>
 <p>It <strong>never</strong> sends team names, player names or numbers, scores, statistics, or any other content you record. This data is used only to improve RallyStat; it is not sold, not used for advertising, and not combined with data from other apps. See <a href="https://posthog.com/privacy">PostHog's privacy policy</a>.</p>
 
 <h2>Crash reports</h2>
-<p>If the app crashes or hits an error, it sends a diagnostic report to <strong>Sentry</strong> (servers in the United States): the error message and code location, device model, operating system and app version, and a small sample of performance timings. Reports are configured not to include personal information, and never include your recorded data. See <a href="https://sentry.io/privacy/">Sentry's privacy policy</a>.</p>
+<p>If the app crashes or hits an error, it sends a diagnostic report to <strong>Sentry</strong> (servers in the United States): the error message and code location, device model, operating system and app version, and a sample (about 10%) of performance timings. Reports are configured not to include personal information or store your IP address, and never include your recorded data. Error records are automatically deleted after 30 days. See <a href="https://sentry.io/privacy/">Sentry's privacy policy</a>.</p>
 
 <h2>Data we do NOT collect</h2>
 <ul>
   <li>No account, email, or sign-up of any kind</li>
   <li>No advertising, advertising identifiers, or cross-app tracking</li>
-  <li>No precise location, contacts, camera, or photo access</li>
+  <li>No location (precise or approximate), contacts, camera, or photo access</li>
   <li>No names, rosters, scores, or match records in analytics or crash reports</li>
 </ul>
 
 <h2>In-app purchases</h2>
 <p>If you purchase RallyStat Pro, the payment is processed entirely by Apple (App Store) or Google (Google Play). To validate and restore your purchase, the app uses RevenueCat, a purchase-management service. RevenueCat receives an anonymous, randomly generated identifier and your purchase status — never your name, email, or match data. See <a href="https://www.revenuecat.com/privacy">RevenueCat's privacy policy</a>.</p>
+
+<h2>Service providers, international transfer and retention</h2>
+<p>To work and to improve, the app sends the data below to these services. It is sent over an encrypted connection (HTTPS) from time to time while you use the app.</p>
+<ul>
+  <li><strong>PostHog Inc.</strong> (United States) — usage statistics: a random install identifier, screen and feature usage events, device type, operating system and app version, and the device's language and region settings (for example, en, US). Kept for 1 year, then deleted.</li>
+  <li><strong>Functional Software Inc. (Sentry)</strong> (United States) — crash and error reports: error details and code location, device type, operating system and app version, plus a sample (about 10%) of performance timings such as how long app start-up and screens take. Automatically deleted after 30 days.</li>
+  <li><strong>RevenueCat Inc.</strong> (United States) — purchase validation and restore: a random identifier and your purchase status. Kept until you ask us to delete it.</li>
+  <li><strong>Expo (650 Industries, Inc.)</strong> (United States) — checking for app updates: a random per-install identifier (EAS client ID), app version and platform (iOS or Android).</li>
+  <li><strong>Supabase</strong> (servers in Seoul, South Korea) — only while live broadcast or co-recording is switched on: that match's scoreboard data described above. Deleted immediately when you switch sharing off or delete the match.</li>
+</ul>
+<p>Your device's IP address is processed by these services while communicating, but it is not stored with usage statistics or crash reports, and no location (precise or approximate) is collected. Transfers to the United States rely on the safeguards offered by those providers (for example, the EU Standard Contractual Clauses).</p>
+<p>How to refuse: uninstalling the app stops all sending. To have data that was already sent deleted, email <strong>syninasoft@gmail.com</strong>.</p>
 
 <h2>Children's privacy</h2>
 <p>RallyStat is a tool for coaches and players and does not knowingly collect any personal information from anyone, including children. Player names entered by a coach stay on the coach's device unless the coach turns on the optional sharing features above — in which case player display labels default to jersey numbers only, and the shared data is deleted as soon as sharing is turned off.</p>
@@ -72,7 +85,7 @@
 <div class="lang-divider"></div>
 
 <h1>RallyStat — 개인정보처리방침</h1>
-<p class="muted">시행일: 2026-10-03 (이전 판: 2026-07-13) · 개발사: SynIna Soft</p>
+<p class="muted">시행일: 2026-10-25 (이전 판: 2026-10-03) · 개발사: SynIna Soft</p>
 
 <h2>요약</h2>
 <p><strong>RallyStat의 데이터는 사용자의 기기에 저장됩니다.</strong> 기록하는 모든 것(팀, 선수, 경기, 통계)은 기기 내 로컬 데이터베이스에 보관되며, 계정·광고·앱 간 추적이 없습니다. 이름·명단·경기 데이터가 기기 밖으로 나가는 경우는 <em>선택 기능</em>인 라이브 중계와 공동 기록뿐으로, 켜 둔 동안에만 해당 경기의 점수판 데이터가 서버로 전송되고 끄면 즉시 삭제됩니다. 이와 별도로 앱의 안정성과 개선을 위해 이름이나 경기 데이터를 담지 않은 <strong>익명 사용 통계와 오류 보고</strong>를 보냅니다(아래 참조).</p>
@@ -81,7 +94,7 @@
 <p>경기 기록, 팀 명단, 선수 이름·등번호, 앱 설정은 기기 내 로컬 데이터베이스에 저장됩니다. 사용자가 직접 내보내기(CSV, PDF, 백업 파일)를 실행해 공유하거나 아래의 선택 공유 기능을 켜지 않는 한 이 데이터는 기기를 떠나지 않습니다. 기기의 표준 백업(예: iCloud 백업, Google 백업)에는 Apple 또는 Google의 약관에 따라 앱 데이터가 포함될 수 있습니다.</p>
 
 <h2>선택 온라인 기능: 라이브 중계·공동 기록</h2>
-<p>특정 경기에 <strong>라이브 중계</strong> 또는 <strong>공동 기록</strong>을 켜면, 공유 코드를 아는 사람이 실시간 상황판을 보거나 기록을 도울 수 있도록 그 경기의 점수판 데이터가 서버(Supabase 호스팅)로 전송됩니다: 팀 이름, 점수·세트 결과, 스탯, 선수 표시명, 그리고 공동 기록의 경우 보조 기록자가 스스로 정한 기록자 이름.</p>
+<p>특정 경기에 <strong>라이브 중계</strong> 또는 <strong>공동 기록</strong>을 켜면, 공유 코드를 아는 사람이 실시간 상황판을 보거나 기록을 도울 수 있도록 그 경기의 점수판 데이터가 서버(Supabase 호스팅, 대한민국 서울)로 전송됩니다: 팀 이름, 점수·세트 결과, 스탯, 선수 표시명, 그리고 공동 기록의 경우 보조 기록자가 스스로 정한 기록자 이름.</p>
 <ul>
   <li>두 기능 모두 <strong>기본은 꺼짐</strong>이며 경기 단위로만 적용됩니다.</li>
   <li>선수 표시명의 기본값은 <strong>등번호만</strong>입니다. 등번호와 이름을 함께 보내는 것은 공유 설정에서 경기마다 명시적으로 선택할 때만 이뤄집니다.</li>
@@ -94,23 +107,36 @@
 <ul>
   <li>기기에서 무작위로 만든 식별자(이름·이메일·계정과 연결되지 않음)</li>
   <li>어떤 화면을 열고 어떤 기능을 썼는지(예: 경기 시작, 리포트 공유, Pro 화면 조회)와 경기 방식·앱 버전 같은 기술 정보</li>
-  <li>기기 종류, 운영체제와 버전, 앱 버전, 그리고 PostHog가 IP 주소로 추정하는 대략적인 위치(국가·지역)</li>
+  <li>기기 종류, 운영체제와 버전, 앱 버전, 기기의 언어·지역 설정(예: ko, KR)</li>
 </ul>
+<p>IP 주소는 저장하지 않고 위치도 수집하지 않습니다. 나라는 기기의 지역 설정으로만 알 수 있습니다. 사용 통계는 1년 동안 보관한 뒤 삭제합니다.</p>
 <p>팀 이름, 선수 이름·등번호, 점수, 스탯 등 사용자가 기록한 내용은 <strong>절대</strong> 보내지 않습니다. 이 정보는 RallyStat 개선에만 쓰며, 판매하거나 광고에 쓰거나 다른 앱의 데이터와 결합하지 않습니다. <a href="https://posthog.com/privacy">PostHog 개인정보처리방침</a>을 참고하세요.</p>
 
 <h2>오류 보고</h2>
-<p>앱이 비정상 종료되거나 오류가 나면 진단 보고서를 <strong>Sentry</strong>(미국 서버)로 보냅니다. 오류 메시지와 코드 위치, 기기 모델, 운영체제와 앱 버전, 일부 성능 측정값이 담깁니다. 개인정보를 포함하지 않도록 설정되어 있으며, 기록한 데이터는 담기지 않습니다. <a href="https://sentry.io/privacy/">Sentry 개인정보처리방침</a>을 참고하세요.</p>
+<p>앱이 비정상 종료되거나 오류가 나면 진단 보고서를 <strong>Sentry</strong>(미국 서버)로 보냅니다. 오류 메시지와 코드 위치, 기기 모델, 운영체제와 앱 버전, 성능 측정값 표본(약 10%)이 담깁니다. 개인정보와 IP 주소를 저장하지 않도록 설정되어 있으며, 기록한 데이터는 담기지 않습니다. 오류 기록은 30일 뒤 자동 삭제됩니다. <a href="https://sentry.io/privacy/">Sentry 개인정보처리방침</a>을 참고하세요.</p>
 
 <h2>수집하지 않는 것</h2>
 <ul>
   <li>계정·이메일·가입 절차 없음</li>
   <li>광고·광고 식별자·앱 간 추적 없음</li>
-  <li>정밀 위치·연락처·카메라·사진 접근 없음</li>
+  <li>위치(정밀·대략 모두)·연락처·카메라·사진 수집·접근 없음</li>
   <li>사용 통계와 오류 보고에 이름·명단·점수·경기 기록 없음</li>
 </ul>
 
 <h2>인앱 구매</h2>
 <p>RallyStat Pro를 구매하는 경우 결제는 전적으로 Apple(App Store) 또는 Google(Google Play)이 처리합니다. 구매 확인·복원을 위해 구매 관리 서비스인 RevenueCat을 사용하며, RevenueCat은 무작위로 생성된 익명 식별자와 구매 상태만 전달받습니다. 이름, 이메일, 경기 데이터는 절대 전달되지 않습니다. <a href="https://www.revenuecat.com/privacy">RevenueCat 개인정보처리방침</a>을 참고하세요.</p>
+
+<h2>처리 위탁·국외 이전·보관 기간</h2>
+<p>앱은 동작과 개선을 위해 아래 서비스로 다음 정보를 보냅니다. 앱을 쓰는 동안 암호화된 연결(HTTPS)로 수시로 전송됩니다.</p>
+<ul>
+  <li><strong>PostHog Inc.</strong>(미국) — 사용 통계: 무작위 설치 ID, 화면·기능 사용 이벤트, 기기 종류·운영체제·앱 버전, 기기 언어·지역 설정(예: ko, KR). 1년 보관 뒤 삭제합니다.</li>
+  <li><strong>Functional Software Inc.(Sentry)</strong>(미국) — 오류 보고: 오류 내용과 코드 위치, 기기 종류·운영체제·앱 버전, 그리고 앱 시작·화면 표시에 걸린 시간 같은 성능 측정값 표본(약 10%). 30일 뒤 자동 삭제됩니다.</li>
+  <li><strong>RevenueCat Inc.</strong>(미국) — 구매 확인·복원: 무작위 식별자와 구매 상태. 삭제를 요청할 때까지 보관합니다.</li>
+  <li><strong>Expo(650 Industries, Inc.)</strong>(미국) — 앱 업데이트 확인: 설치마다 무작위로 만든 식별자(EAS 클라이언트 ID), 앱 버전, 플랫폼(iOS·Android).</li>
+  <li><strong>Supabase</strong>(서버: 대한민국 서울) — 라이브 중계·공동 기록을 켠 동안만: 위에 적은 해당 경기의 점수판 데이터. 공유를 끄거나 경기를 지우면 즉시 삭제됩니다.</li>
+</ul>
+<p>통신 과정에서 기기의 IP 주소가 각 서비스에서 처리되지만, 사용 통계·오류 보고에는 저장하지 않으며 위치(정밀·대략 모두)는 수집하지 않습니다. 미국으로의 이전은 각 제공자가 제공하는 보호조치(예: EU 표준계약조항)에 따릅니다.</p>
+<p>거부 방법: 앱을 삭제하면 모든 전송이 멈춥니다. 이미 보낸 정보의 삭제는 <strong>syninasoft@gmail.com</strong>으로 요청해 주세요.</p>
 
 <h2>아동의 개인정보</h2>
 <p>RallyStat은 코치와 선수를 위한 도구이며, 아동을 포함한 누구의 개인정보도 의도적으로 수집하지 않습니다. 코치가 입력한 선수 이름은 위의 선택 공유 기능을 켜지 않는 한 코치의 기기에만 남습니다. 공유를 켜더라도 선수 표시는 기본적으로 등번호만이며, 공유를 끄는 즉시 서버 데이터가 삭제됩니다.</p>
