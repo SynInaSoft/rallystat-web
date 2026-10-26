@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>RallyStat: volleyball stats app and score keeper for coaches and parents</title>
-<meta name="description" content="RallyStat is a volleyball stat tracker and score keeper for coaches, team staff and parents on iPhone, iPad and Android. One tap per rally, automatic rotation, 6- and 9-player, offline, pay once.">
+<meta name="description" content="RallyStat is a volleyball stats app for coaches and parents on iPhone, iPad and Android. One tap per rally, an AI analysis backed by your numbers, live co-recording, 6- and 9-player, offline, pay once.">
 <link rel="canonical" href="https://syninasoft.github.io/rallystat-web/">
 <link rel="alternate" hreflang="en" href="https://syninasoft.github.io/rallystat-web/">
 <link rel="alternate" hreflang="es" href="https://syninasoft.github.io/rallystat-web/index.es.html">
@@ -21,7 +21,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="RallyStat">
 <meta property="og:title" content="RallyStat: volleyball stats app and score keeper for coaches and parents">
-<meta property="og:description" content="RallyStat is a volleyball stat tracker and score keeper for coaches, team staff and parents on iPhone, iPad and Android. One tap per rally, automatic rotation, 6- and 9-player, offline, pay once.">
+<meta property="og:description" content="RallyStat is a volleyball stats app for coaches and parents on iPhone, iPad and Android. One tap per rally, an AI analysis backed by your numbers, live co-recording, 6- and 9-player, offline, pay once.">
 <meta property="og:url" content="https://syninasoft.github.io/rallystat-web/">
 <meta name="color-scheme" content="light dark">
 <style>:root{--bg:#F7F8FA;--card:#FFFFFF;--ink:#16233B;--soft:#4A5872;--line:#DDE3EC;--accent:#FFB703;--accentInk:#1B1300;--link:#0B5CAD}
@@ -66,7 +66,7 @@ a{color:var(--link)}</style>
   "랠리스탯",
   "랠리스탯 : 배구 기록·통계"
  ],
- "description": "RallyStat is a volleyball stat tracker and score keeper for coaches, team staff and parents. Record every rally with one tap — the score, rotation and libero update themselves, so your eyes stay on the court, not the clipboard.",
+ "description": "RallyStat is a volleyball stats app for coaches, team staff and parents. Record each rally with one tap, then turn the match into an AI analysis: how points were won and lost, the most frequent errors and what to work on next, each with the numbers behind it. You can try it free on your own match.",
  "url": "https://syninasoft.github.io/rallystat-web/",
  "applicationCategory": "SportsApplication",
  "operatingSystem": "iOS, iPadOS, Android",
@@ -121,7 +121,23 @@ a{color:var(--link)}</style>
    "name": "What is the best volleyball stats app?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "It depends on how you record. RallyStat is built to be the simplest: one tap per rally, so a solo coach, an assistant on the bench or a parent in the stands can keep stats without missing the game. It works offline and you pay once. If you need touch-by-touch scouting of every pass and set, a dedicated scouting tool may suit you better."
+    "text": "It depends on what you need after the match. RallyStat is built to be quick to record and easy to read: one tap per rally, then an AI analysis request that shows where points were won and lost, with the numbers behind each finding. You can try it free on your own match. If you need touch-by-touch scouting of every pass and set, or video analysis, a dedicated scouting tool may suit you better."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "How does the AI analysis work?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "From the Stats tab, RallyStat prepares a ready-to-use analysis request: your match data, what each stat means and the order of the analysis: match summary, how points were scored, the most frequent errors, player contributions and 2 to 3 priorities for practice. It asks the AI to count from the data, back every claim with a number and not to guess. Just share it with the AI chat you use. The free version uses per-player and per-team totals for each set; Pro uses the full rally log, so the analysis can also find runs of three or more points lost in a row."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Rallies are fast. Can two people record together?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Yes. Recording alone, you miss things when rallies are fast. With co-recording, a second coach or team manager joins from their own phone with a code or link and the entries merge live, for example one person on the score and one on player stats. The helper phone only needs the free app. The main device can start co-recording free for 3 matches, then with Pro. Both phones need an internet connection while co-recording is on."
    }
   },
   {
@@ -129,7 +145,7 @@ a{color:var(--link)}</style>
    "name": "A volleyball stats app for club and high school coaches",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "Add your roster once, pick a starting lineup and record kills, aces, blocks, digs and errors as they happen. RallyStat follows the rotation and the libero automatically and shows points, errors and net points per player as soon as the match ends."
+    "text": "Add your roster once, pick a starting lineup and record kills, aces, blocks, digs and errors as they happen. RallyStat follows the rotation and the libero automatically and shows points, errors and net points per player as soon as the match ends. RallyStat has been tested with real school and club match records and improved at coaches' requests, for example two liberos who swap during a match, and serve stats with attempts and points won on serve."
    }
   },
   {
@@ -138,6 +154,14 @@ a{color:var(--link)}</style>
    "acceptedAnswer": {
     "@type": "Answer",
     "text": "No signal in the gym? RallyStat records fully offline. Parents can keep the score and stats for their child's team, share a one-page match report PDF and, with Pro, let family follow the live score with a code."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "For experienced scorers: code entry",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "If you already keep stats with codes, Pro adds keyboard code entry: short codes in the style professional analysts use, such as \"11KL\", so you can record at rally speed. You can try it free for one match."
    }
   },
   {
@@ -188,16 +212,22 @@ a{color:var(--link)}</style>
 <main>
 <nav class="langs" aria-label="Languages"><b>English</b> <a href="index.es.html" hreflang="es" lang="es">Español</a> <a href="index.pt.html" hreflang="pt" lang="pt-BR">Português</a> <a href="index.tr.html" hreflang="tr" lang="tr">Türkçe</a> <a href="index.fr.html" hreflang="fr" lang="fr">Français</a> <a href="index.ja.html" hreflang="ja" lang="ja">日本語</a> <a href="index.ko.html" hreflang="ko" lang="ko">한국어</a> <a href="index.de.html" hreflang="de" lang="de">Deutsch</a> <a href="index.it.html" hreflang="it" lang="it">Italiano</a> <a href="index.pl.html" hreflang="pl" lang="pl">Polski</a> <a href="index.ru.html" hreflang="ru" lang="ru">Русский</a></nav>
 <h1>RallyStat: Volleyball Stats</h1>
-<p class="lead">RallyStat is a volleyball stat tracker and score keeper for coaches, team staff and parents. Record every rally with one tap — the score, rotation and libero update themselves, so your eyes stay on the court, not the clipboard.</p>
+<p class="lead">RallyStat is a volleyball stats app for coaches, team staff and parents. Record each rally with one tap, then turn the match into an AI analysis: how points were won and lost, the most frequent errors and what to work on next, each with the numbers behind it. You can try it free on your own match.</p>
 <div class="stores"><a href="https://apps.apple.com/us/app/id6790425777">Download on the App Store</a><a class="play" href="https://play.google.com/store/apps/details?id=com.syninasoft.volleyballcoach&amp;hl=en">Get it on Google Play</a></div>
-<section class="glance"><h2>RallyStat at a glance</h2><ul><li>One tap per rally: the score, rotation and libero update themselves</li><li>6-player and 9-player volleyball</li><li>Works offline, with no account and no ads</li><li>Free: record matches and see player stats for up to 2 teams</li><li>RallyStat Pro: one-time purchase, US$14.99 in the US (prices vary by country), no subscription</li><li>iPhone, iPad and Android, in 11 languages</li></ul></section>
+<section class="glance"><h2>RallyStat at a glance</h2><ul><li>AI analysis: findings backed by numbers from the AI chat you already use (free with match totals; Pro adds the rally-by-rally flow)</li><li>Co-recording: a second coach records on their own phone and the entries merge live</li><li>One tap per rally: the score, rotation and libero update themselves</li><li>6-player and 9-player volleyball</li><li>Recording works offline, with no account and no ads</li><li>Free for up to 2 teams; RallyStat Pro is a one-time purchase, US$14.99 in the US (prices vary by country), no subscription</li><li>iPhone, iPad and Android, in 11 languages</li></ul></section>
 <h2>What is the best volleyball stats app?</h2>
-<p>It depends on how you record. RallyStat is built to be the simplest: one tap per rally, so a solo coach, an assistant on the bench or a parent in the stands can keep stats without missing the game. It works offline and you pay once. If you need touch-by-touch scouting of every pass and set, a dedicated scouting tool may suit you better.</p>
+<p>It depends on what you need after the match. RallyStat is built to be quick to record and easy to read: one tap per rally, then an AI analysis request that shows where points were won and lost, with the numbers behind each finding. You can try it free on your own match. If you need touch-by-touch scouting of every pass and set, or video analysis, a dedicated scouting tool may suit you better.</p>
 <p><a href="compare.html">Compare volleyball stats apps →</a></p>
+<h2>How does the AI analysis work?</h2>
+<p>From the Stats tab, RallyStat prepares a ready-to-use analysis request: your match data, what each stat means and the order of the analysis: match summary, how points were scored, the most frequent errors, player contributions and 2 to 3 priorities for practice. It asks the AI to count from the data, back every claim with a number and not to guess. Just share it with the AI chat you use. The free version uses per-player and per-team totals for each set; Pro uses the full rally log, so the analysis can also find runs of three or more points lost in a row.</p>
+<h2>Rallies are fast. Can two people record together?</h2>
+<p>Yes. Recording alone, you miss things when rallies are fast. With co-recording, a second coach or team manager joins from their own phone with a code or link and the entries merge live, for example one person on the score and one on player stats. The helper phone only needs the free app. The main device can start co-recording free for 3 matches, then with Pro. Both phones need an internet connection while co-recording is on.</p>
 <h2>A volleyball stats app for club and high school coaches</h2>
-<p>Add your roster once, pick a starting lineup and record kills, aces, blocks, digs and errors as they happen. RallyStat follows the rotation and the libero automatically and shows points, errors and net points per player as soon as the match ends.</p>
+<p>Add your roster once, pick a starting lineup and record kills, aces, blocks, digs and errors as they happen. RallyStat follows the rotation and the libero automatically and shows points, errors and net points per player as soon as the match ends. RallyStat has been tested with real school and club match records and improved at coaches&#x27; requests, for example two liberos who swap during a match, and serve stats with attempts and points won on serve.</p>
 <h2>An offline volleyball scorekeeper for parents in the stands</h2>
 <p>No signal in the gym? RallyStat records fully offline. Parents can keep the score and stats for their child&#x27;s team, share a one-page match report PDF and, with Pro, let family follow the live score with a code.</p>
+<h2>For experienced scorers: code entry</h2>
+<p>If you already keep stats with codes, Pro adds keyboard code entry: short codes in the style professional analysts use, such as &quot;11KL&quot;, so you can record at rally speed. You can try it free for one match.</p>
 <h2>Features</h2>
 <h3>ONE TAP PER RALLY</h3>
 <ul><li>Kills, aces, blocks, digs and errors — the scoreboard and player stats update themselves</li><li>Automatic rotation and libero tracking with a live court view</li><li>6-player and 9-player volleyball: starting lineup, serving order, substitutions and target score per set</li><li>Focus entry: big step-by-step buttons, so anyone on the bench can keep stats</li><li>Optional free court layouts and formations that follow the score</li><li>Fix any rally mid-set without losing the score</li></ul>

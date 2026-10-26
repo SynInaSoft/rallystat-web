@@ -7,19 +7,8 @@ L = {}
 
 L['en'] = dict(
     title='RallyStat: volleyball stats app and score keeper for coaches and parents',
-    meta='RallyStat is a volleyball stat tracker and score keeper for coaches, team staff and parents on iPhone, iPad and Android. One tap per rally, automatic rotation, 6- and 9-player, offline, pay once.',
     glance_h='RallyStat at a glance',
-    glance=[
-        'One tap per rally: the score, rotation and libero update themselves',
-        '6-player and 9-player volleyball',
-        'Works offline, with no account and no ads',
-        'Free: record matches and see player stats for up to 2 teams',
-        'RallyStat Pro: one-time purchase, US$14.99 in the US (prices vary by country), no subscription',
-        'iPhone, iPad and Android, in 11 languages',
-    ],
     qa=[
-        ('What is the best volleyball stats app?',
-         'It depends on how you record. RallyStat is built to be the simplest: one tap per rally, so a solo coach, an assistant on the bench or a parent in the stands can keep stats without missing the game. It works offline and you pay once. If you need touch-by-touch scouting of every pass and set, a dedicated scouting tool may suit you better.'),
         ('A volleyball stats app for club and high school coaches',
          'Add your roster once, pick a starting lineup and record kills, aces, blocks, digs and errors as they happen. RallyStat follows the rotation and the libero automatically and shows points, errors and net points per player as soon as the match ends.'),
         ('An offline volleyball scorekeeper for parents in the stands',
@@ -46,19 +35,8 @@ L['en'] = dict(
 
 L['ko'] = dict(
     title='랠리스탯: 배구 기록·통계 앱 — 코치·동호회·학부모용 점수 기록',
-    meta='랠리스탯은 코치·팀 스태프·학부모를 위한 배구 기록·통계 앱입니다. 랠리마다 탭 한 번, 자동 로테이션, 9인제·6인제, 오프라인, 한 번 구매. iPhone·iPad·Android, 한국어 완전 지원.',
     glance_h='한눈에 보는 랠리스탯',
-    glance=[
-        '랠리마다 탭 한 번: 점수·로테이션·리베로가 알아서 바뀜',
-        '9인제·6인제 배구 모두 지원',
-        '오프라인 작동, 계정·광고 없음',
-        '무료: 팀 2개까지 경기 기록과 선수 스탯',
-        '랠리스탯 Pro: 한 번 구매(미국 US$14.99, 나라별 가격 다름), 구독 없음',
-        'iPhone·iPad·Android, 11개 언어 — 한국어 완전 지원',
-    ],
     qa=[
-        ('배구 기록 앱 추천 — 어떤 앱이 좋을까?',
-         '기록하는 방식에 따라 다릅니다. 랠리스탯은 가장 단순한 기록 앱을 목표로 만들었습니다. 랠리마다 탭 한 번이라 혼자 하는 코치, 벤치의 매니저, 관중석의 학부모도 경기를 놓치지 않고 기록할 수 있습니다. 인터넷 없이 되고, 한 번만 구매하면 됩니다. 리시브·토스까지 터치 하나하나를 기록하는 정밀 분석이 필요하다면 전문 스카우팅 도구가 더 맞을 수 있습니다.'),
         ('동호회·학교 배구부 코치를 위한 배구 기록 앱',
          '선수 명단을 한 번 넣고 선발 라인업을 고른 뒤 공격 득점·서브 에이스·블로킹·디그·범실을 바로 기록합니다. 로테이션과 리베로는 자동으로 따라가고, 경기가 끝나면 선수별 득점·범실·순득점이 바로 나옵니다. 9인제 배구도 그대로 기록합니다.'),
         ('관중석 학부모를 위한 오프라인 배구 점수 기록',
@@ -85,19 +63,8 @@ L['ko'] = dict(
 
 L['ja'] = dict(
     title='RallyStat：バレーボール記録・スコアアプリ（6人制・9人制）',
-    meta='RallyStatは、コーチ・チームスタッフ・保護者のためのバレーボール記録・スコアアプリです。ラリーごとにワンタップ、ローテーション自動、6人制・9人制、オフライン、買い切り。iPhone・iPad・Android対応。',
     glance_h='RallyStatの特長',
-    glance=[
-        'ラリーごとにワンタップ：スコア・ローテーション・リベロが自動で更新',
-        '6人制・9人制バレーボールに対応',
-        'オフラインで動作、アカウント不要、広告なし',
-        '無料：2チームまで試合を記録し、選手スタッツを確認',
-        'RallyStat Pro：買い切り（米国ではUS$14.99、国により価格は異なります）、サブスクなし',
-        'iPhone・iPad・Android、11言語対応 — 日本語に完全対応',
-    ],
     qa=[
-        ('バレーボールの記録アプリはどれがおすすめ？',
-         '記録のしかたによって変わります。RallyStatは「いちばんシンプルな記録アプリ」を目指しています。ラリーごとにワンタップなので、ひとりで見るコーチも、ベンチのマネージャーも、観客席の保護者も、試合を見逃さずに記録できます。集中入力の大きなボタンは、画面を見ずに片手でタップしやすいように作っています。オフラインで動き、買い切りです。パスやトスまで1本ずつ記録する精密なスカウティングが必要なら、専用の分析ツールのほうが合うかもしれません。'),
         ('部活・クラブのコーチ向けバレーボール記録アプリ',
          '選手名簿を一度登録し、スターティングラインアップを選んだら、スパイク決定・サービスエース・ブロック・ディグ・ミスをその場で記録します。ローテーションとリベロは自動で追跡し、試合が終わるとすぐに選手ごとの得点・ミス・純得点が出ます。9人制もそのまま記録できます。'),
         ('観客席の保護者向け、オフラインのスコア記録',
@@ -111,8 +78,6 @@ L['ja'] = dict(
          'はい。記録・スタッツ・レポートはすべてオフラインで使えます。インターネットを使うのはライブ中継と共同記録だけで、オンにしている間だけです。'),
         ('9人制バレーボールに対応していますか？',
          'はい。6人制と9人制の両方に対応し、スターティングラインアップ、サービスオーダー、選手交代まで記録できます。'),
-        ('RallyLogと同じアプリですか？',
-         'いいえ、別のアプリです。RallyLogは9人制専用の別の開発者のアプリです。RallyStatはSynIna Softが作った、6人制・9人制の両方に対応するバレーボール記録・スコアアプリです。'),
         ('アカウントは必要ですか？',
          'いいえ。登録も広告もありません。データは端末内に保存されます。'),
         ('対応端末と言語は？',
@@ -126,19 +91,8 @@ L['ja'] = dict(
 
 L['de'] = dict(
     title='RallyStat: Volleyball-Statistik-App und Spielprotokoll für Trainer und Eltern',
-    meta='RallyStat ist eine Volleyball-Statistik- und Spielstand-App für Trainer, Teambetreuer und Eltern auf iPhone, iPad und Android. Ein Tipp pro Ballwechsel, automatische Rotation, offline, einmal zahlen.',
     glance_h='RallyStat auf einen Blick',
-    glance=[
-        'Ein Tipp pro Ballwechsel: Spielstand, Rotation und Libero aktualisieren sich selbst',
-        'Volleyball mit 6 und mit 9 Spielern',
-        'Funktioniert offline, ohne Konto und ohne Werbung',
-        'Kostenlos: Spiele aufzeichnen und Spielerstatistiken für bis zu 2 Teams',
-        'RallyStat Pro: Einmalkauf, US$14,99 in den USA (Preise je nach Land), kein Abo',
-        'iPhone, iPad und Android, in 11 Sprachen — vollständig auf Deutsch',
-    ],
     qa=[
-        ('Welche ist die beste Volleyball-Statistik-App?',
-         'Das hängt davon ab, wie du aufzeichnest. RallyStat soll die einfachste sein: ein Tipp pro Ballwechsel, damit ein Trainer allein, jemand auf der Bank oder Eltern auf der Tribüne Statistiken führen können, ohne das Spiel zu verpassen. Die App läuft offline und du zahlst nur einmal. Wer jede Annahme und jedes Zuspiel einzeln scouten will, ist mit einem spezialisierten Scouting-Tool besser bedient.'),
         ('Volleyball-Statistik-App für Vereins- und Schultrainer',
          'Kader einmal anlegen, Startaufstellung wählen und Angriffspunkte, Asse, Blocks, Abwehraktionen und Fehler direkt erfassen. RallyStat verfolgt Rotation und Libero automatisch und zeigt nach dem Spiel sofort Punkte, Fehler und Netto-Punkte pro Spieler.'),
         ('Offline-Spielprotokoll für Eltern auf der Tribüne',
@@ -165,19 +119,8 @@ L['de'] = dict(
 
 L['fr'] = dict(
     title='RallyStat : application de statistiques de volley et feuille de match pour entraîneurs et parents',
-    meta='RallyStat est une application de statistiques et de score de volley pour entraîneurs, staff et parents, sur iPhone, iPad et Android. Un toucher par échange, rotation automatique, hors ligne, achat unique.',
     glance_h='RallyStat en bref',
-    glance=[
-        'Un toucher par échange : le score, la rotation et le libéro se mettent à jour tout seuls',
-        'Volley à 6 et à 9 joueurs',
-        'Fonctionne hors ligne, sans compte et sans publicité',
-        'Gratuit : enregistrez des matchs et voyez les stats des joueurs pour 2 équipes',
-        'RallyStat Pro : achat unique, 14,99 $ US aux États-Unis (prix selon le pays), sans abonnement',
-        'iPhone, iPad et Android, en 11 langues — entièrement en français',
-    ],
     qa=[
-        ('Quelle est la meilleure application de statistiques de volley ?',
-         'Tout dépend de votre façon de noter. RallyStat veut être la plus simple : un toucher par échange, pour qu\'un entraîneur seul, quelqu\'un sur le banc ou un parent en tribune puisse tenir les stats sans rater le match. Elle fonctionne hors ligne et se paie une seule fois. Pour un scouting touche par touche de chaque réception et passe, un outil de scouting spécialisé conviendra mieux.'),
         ('Une application de stats de volley pour entraîneurs de club et de lycée',
          'Saisissez votre effectif une fois, choisissez la composition de départ et notez attaques gagnantes, aces, contres, défenses et fautes au fil du jeu. RallyStat suit la rotation et le libéro automatiquement et affiche points, fautes et points nets par joueur dès la fin du match.'),
         ('Une feuille de score de volley hors ligne pour les parents en tribune',
@@ -204,19 +147,8 @@ L['fr'] = dict(
 
 L['it'] = dict(
     title='RallyStat: app per statistiche di pallavolo e segnapunti per allenatori e genitori',
-    meta='RallyStat è un\'app di statistiche e segnapunti di pallavolo per allenatori, staff e genitori su iPhone, iPad e Android. Un tocco per scambio, rotazione automatica, offline, acquisto unico.',
     glance_h='RallyStat in breve',
-    glance=[
-        'Un tocco per scambio: punteggio, rotazione e libero si aggiornano da soli',
-        'Pallavolo a 6 e a 9 giocatori',
-        'Funziona offline, senza account e senza pubblicità',
-        'Gratis: registra partite e vedi le statistiche dei giocatori per 2 squadre',
-        'RallyStat Pro: acquisto unico, 14,99 USD negli Stati Uniti (prezzi diversi per paese), nessun abbonamento',
-        'iPhone, iPad e Android, in 11 lingue — completamente in italiano',
-    ],
     qa=[
-        ('Qual è la migliore app per le statistiche di pallavolo?',
-         'Dipende da come registri. RallyStat vuole essere la più semplice: un tocco per scambio, così un allenatore da solo, qualcuno in panchina o un genitore in tribuna può tenere le statistiche senza perdersi la partita. Funziona offline e si paga una volta sola. Per lo scouting tocco per tocco di ogni ricezione e alzata, uno strumento di scouting professionale è più adatto.'),
         ('App di statistiche di pallavolo per allenatori di società e scuola',
          'Inserisci la rosa una volta, scegli la formazione iniziale e registra attacchi vincenti, ace, muri, difese ed errori mentre succedono. RallyStat segue rotazione e libero in automatico e mostra punti, errori e punti netti per giocatore appena finisce la partita.'),
         ('Segnapunti di pallavolo offline per i genitori in tribuna',
@@ -243,19 +175,8 @@ L['it'] = dict(
 
 L['es'] = dict(
     title='RallyStat: app de estadísticas de voleibol y marcador para entrenadores y padres',
-    meta='RallyStat es una app de estadísticas y marcador de voleibol para entrenadores, cuerpo técnico y padres en iPhone, iPad y Android. Un toque por jugada, rotación automática, sin conexión, pago único.',
     glance_h='RallyStat en resumen',
-    glance=[
-        'Un toque por jugada: el marcador, la rotación y el líbero se actualizan solos',
-        'Voleibol de 6 y de 9 jugadores',
-        'Funciona sin conexión, sin cuenta y sin anuncios',
-        'Gratis: registra partidos y ve estadísticas por jugador de hasta 2 equipos',
-        'RallyStat Pro: pago único, US$14,99 en EE. UU. (el precio varía según el país), sin suscripción',
-        'iPhone, iPad y Android, en 11 idiomas — totalmente en español',
-    ],
     qa=[
-        ('¿Cuál es la mejor app de estadísticas de voleibol?',
-         'Depende de cómo registres. RallyStat busca ser la más sencilla: un toque por jugada, para que un entrenador solo, alguien en el banco o un padre en la grada pueda llevar las estadísticas sin perderse el partido. Funciona sin conexión y se paga una sola vez. Si necesitas scouting toque a toque de cada recepción y colocación, una herramienta de scouting especializada te encajará mejor.'),
         ('App de estadísticas de voleibol para entrenadores de club y colegio',
          'Carga tu plantilla una vez, elige la alineación inicial y registra remates, aces, bloqueos, defensas y errores en el momento. RallyStat sigue la rotación y el líbero automáticamente y muestra puntos, errores y puntos netos por jugador en cuanto termina el partido.'),
         ('Marcador de voleibol sin conexión para padres en la grada',
@@ -282,19 +203,8 @@ L['es'] = dict(
 
 L['pt'] = dict(
     title='RallyStat: app de estatísticas de vôlei e placar para técnicos e pais',
-    meta='RallyStat é um app de estatísticas e placar de vôlei para técnicos, comissão técnica e pais no iPhone, iPad e Android. Um toque por rally, rodízio automático, funciona offline, pagamento único.',
     glance_h='RallyStat em resumo',
-    glance=[
-        'Um toque por rally: placar, rodízio e líbero se atualizam sozinhos',
-        'Vôlei de 6 e de 9 jogadores',
-        'Funciona offline, sem conta e sem anúncios',
-        'Grátis: registre partidas e veja as estatísticas dos jogadores de até 2 times',
-        'RallyStat Pro: pagamento único, US$14,99 nos EUA (o preço varia por país), sem assinatura',
-        'iPhone, iPad e Android, em 11 idiomas — totalmente em português',
-    ],
     qa=[
-        ('Qual é o melhor app de estatísticas de vôlei?',
-         'Depende de como você registra. O RallyStat quer ser o mais simples: um toque por rally, para que um técnico sozinho, alguém no banco ou um pai na arquibancada consiga anotar as estatísticas sem perder o jogo. Funciona offline e você paga uma vez só. Se você precisa de scout toque a toque de cada recepção e levantamento, uma ferramenta de scout especializada vai atender melhor.'),
         ('App de estatísticas de vôlei para técnicos de clube e escola',
          'Cadastre o elenco uma vez, escolha a escalação inicial e registre ataques, aces, bloqueios, defesas e erros na hora. O RallyStat acompanha o rodízio e o líbero automaticamente e mostra pontos, erros e saldo de pontos por jogador assim que a partida termina.'),
         ('Placar de vôlei offline para pais na arquibancada',
@@ -321,19 +231,8 @@ L['pt'] = dict(
 
 L['pl'] = dict(
     title='RallyStat: aplikacja do statystyk siatkówki i protokół meczu dla trenerów i rodziców',
-    meta='RallyStat to aplikacja do statystyk i wyniku w siatkówce dla trenerów, sztabu i rodziców na iPhone, iPad i Android. Jedno dotknięcie na akcję, automatyczna rotacja, offline, jednorazowy zakup.',
     glance_h='RallyStat w skrócie',
-    glance=[
-        'Jedno dotknięcie na akcję: wynik, rotacja i libero aktualizują się same',
-        'Siatkówka 6- i 9-osobowa',
-        'Działa offline, bez konta i bez reklam',
-        'Za darmo: zapisuj mecze i statystyki zawodników dla 2 drużyn',
-        'RallyStat Pro: jednorazowy zakup, 14,99 USD w USA (ceny zależą od kraju), bez subskrypcji',
-        'iPhone, iPad i Android, w 11 językach — w pełni po polsku',
-    ],
     qa=[
-        ('Jaka jest najlepsza aplikacja do statystyk siatkówki?',
-         'To zależy, jak notujesz. RallyStat ma być najprostsza: jedno dotknięcie na akcję, więc trener w pojedynkę, ktoś na ławce albo rodzic na trybunach poprowadzi statystyki, nie tracąc meczu z oczu. Działa offline i płacisz raz. Jeśli potrzebujesz scoutingu każdego przyjęcia i wystawy osobno, lepiej sprawdzi się specjalistyczne narzędzie do scoutingu.'),
         ('Aplikacja do statystyk siatkówki dla trenerów klubowych i szkolnych',
          'Wpisz skład raz, wybierz ustawienie wyjściowe i zapisuj ataki, asy, bloki, obrony i błędy na bieżąco. RallyStat sam śledzi rotację i libero, a po meczu od razu pokazuje punkty, błędy i bilans punktów każdego zawodnika.'),
         ('Protokół siatkówki offline dla rodziców na trybunach',
@@ -360,19 +259,8 @@ L['pl'] = dict(
 
 L['ru'] = dict(
     title='RallyStat: приложение для статистики волейбола и протокола матча для тренеров и родителей',
-    meta='RallyStat — приложение для статистики и счёта в волейболе для тренеров, штаба и родителей на iPhone, iPad и Android. Одно касание на розыгрыш, автоматическая расстановка, офлайн, разовая покупка.',
     glance_h='RallyStat коротко',
-    glance=[
-        'Одно касание на розыгрыш: счёт, расстановка и либеро обновляются сами',
-        'Волейбол 6 на 6 и 9 на 9',
-        'Работает офлайн, без аккаунта и без рекламы',
-        'Бесплатно: запись матчей и статистика игроков для 2 команд',
-        'RallyStat Pro: разовая покупка, 14,99 долл. США в США (цена зависит от страны), без подписки',
-        'iPhone, iPad и Android, 11 языков — полностью на русском',
-    ],
     qa=[
-        ('Какое приложение для статистики волейбола лучше?',
-         'Зависит от того, как вы ведёте запись. RallyStat задуман как самый простой: одно касание на розыгрыш, чтобы тренер в одиночку, помощник на скамейке или родитель на трибуне вёл статистику, не пропуская игру. Работает офлайн, платите один раз. Если нужен скаутинг каждого приёма и передачи по отдельности, лучше подойдёт специализированный инструмент для скаутинга.'),
         ('Приложение для статистики волейбола для тренеров клубов и школ',
          'Один раз внесите состав, выберите стартовую расстановку и отмечайте атаки, эйсы, блоки, защиту и ошибки по ходу игры. RallyStat сам следит за переходами и либеро и сразу после матча показывает очки, ошибки и чистые очки каждого игрока.'),
         ('Офлайн-протокол волейбольного матча для родителей на трибуне',
@@ -399,19 +287,8 @@ L['ru'] = dict(
 
 L['tr'] = dict(
     title='RallyStat: antrenörler ve veliler için voleybol istatistik ve skor takip uygulaması',
-    meta='RallyStat; antrenörler, takım ekibi ve veliler için iPhone, iPad ve Android\'de voleybol istatistik ve skor takip uygulamasıdır. Her ralliye tek dokunuş, otomatik rotasyon, çevrimdışı, tek seferlik ödeme.',
     glance_h='Kısaca RallyStat',
-    glance=[
-        'Her ralliye tek dokunuş: skor, rotasyon ve libero kendiliğinden güncellenir',
-        '6 ve 9 kişilik voleybol',
-        'Çevrimdışı çalışır, hesap ve reklam yok',
-        'Ücretsiz: 2 takıma kadar maç kaydı ve oyuncu istatistikleri',
-        'RallyStat Pro: tek seferlik satın alma, ABD\'de 14,99 USD (fiyat ülkeye göre değişir), abonelik yok',
-        'iPhone, iPad ve Android, 11 dil — tamamen Türkçe',
-    ],
     qa=[
-        ('En iyi voleybol istatistik uygulaması hangisi?',
-         'Nasıl kayıt tuttuğunuza bağlı. RallyStat en sade uygulama olmayı hedefler: her ralliye tek dokunuş, böylece tek başına çalışan bir antrenör, yedek kulübesindeki biri ya da tribündeki bir veli maçı kaçırmadan istatistik tutabilir. Çevrimdışı çalışır ve bir kez ödersiniz. Her karşılama ve pası tek tek kaydeden ayrıntılı scouting gerekiyorsa, özel bir scouting aracı daha uygun olabilir.'),
         ('Kulüp ve okul antrenörleri için voleybol istatistik uygulaması',
          'Kadronuzu bir kez girin, başlangıç dizilişini seçin; smaçları, servis aslarını, blokları, savunmaları ve hataları anında kaydedin. RallyStat rotasyonu ve liberoyu otomatik izler, maç biter bitmez oyuncu başına sayıları, hataları ve net sayıları gösterir.'),
         ('Tribündeki veliler için çevrimdışı voleybol skor takibi',
@@ -435,3 +312,11 @@ L['tr'] = dict(
     support='Destek', privacy='Gizlilik', langs='Diller', by='SynIna Soft',
     compare='Voleybol istatistik uygulamaları karşılaştırması',
 )
+
+
+# 첫 화면(10-27 총괄 지시): meta·한눈에·질문 단락은 first_l10n.py. 기존 코치·학부모 단락은 그대로 이어 붙인다.
+from first_l10n import F  # noqa: E402
+for _k, _f in F.items():
+    _coach, _parents = L[_k]['qa']
+    L[_k].update(meta=_f['meta'], glance=_f['glance'], lead=_f['lead'],
+                 qa=_f['qa'] + [(_coach[0], _coach[1] + ' ' + _f['tested']), _parents, _f['codes']])

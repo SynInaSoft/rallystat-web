@@ -142,7 +142,8 @@ def render(lc):
     code, hreflang, htmllang, locale, cc, hl, name = lc
     t = L[code]
     copy = store_copy(locale)
-    lead, secs, closing = sections(copy['description'])
+    _, secs, closing = sections(copy['description'])
+    lead = t['lead']  # 첫 화면 소개는 스토어 첫 문단 대신 first_l10n(AI 분석 먼저)
     alts = '\n'.join('<link rel="alternate" hreflang="%s" href="%s">' % (x[1], url(x[0])) for x in LANGS)
     alts += '\n<link rel="alternate" hreflang="x-default" href="%s">' % BASE
     nav = ' '.join(('<b>%s</b>' % esc(x[6])) if x[0] == code else
