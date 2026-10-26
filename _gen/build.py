@@ -14,6 +14,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from l10n import L  # noqa: E402
+from compare_l10n import APPS, GLOBAL, LOCAL, C  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 APP = os.path.join(os.path.dirname(ROOT), 'volleyball-coach')
@@ -44,6 +45,14 @@ def page_name(code):
 
 def url(code):
     return BASE if code == 'en' else BASE + page_name(code)
+
+
+def cmp_name(code):
+    return 'compare.html' if code == 'en' else 'compare.%s.html' % code
+
+
+def cmp_url(code):
+    return BASE + cmp_name(code)
 
 
 def esc(s):
@@ -163,8 +172,10 @@ def render(lc):
     out.append(stores)
     out.append('<section class="glance"><h2>%s</h2><ul>%s</ul></section>'
                % (esc(t['glance_h']), ''.join('<li>%s</li>' % esc(g) for g in t['glance'])))
-    for q, a in t['qa']:
+    for i, (q, a) in enumerate(t['qa']):
         out.append('<h2>%s</h2>\n<p>%s</p>' % (esc(q), esc(a)))
+        if i == 0:  # '최고의 앱?' 답 바로 뒤에 비교 페이지
+            out.append('<p><a href="%s">%s →</a></p>' % (cmp_name(code), esc(t['compare'])))
     out.append('<h2>%s</h2>' % esc(t['features_h']))
     for h, items in secs:
         out.append('<h3>%s</h3>\n<ul>%s</ul>' % (esc(h), ''.join('<li>%s</li>' % esc(i) for i in items)))
@@ -172,10 +183,80 @@ def render(lc):
                % (esc(t['faq_h']), ''.join('<dt>%s</dt><dd>%s</dd>' % (esc(q), esc(a)) for q, a in t['faq'])))
     out.append('<p>%s</p>' % esc(closing))
     out.append(stores)
-    out.append('<footer><a href="support.html">%s</a> · <a href="privacy.html">%s</a> · %s · '
+    out.append('<footer><a href="%s">%s</a> · <a href="support.html">%s</a> · <a href="privacy.html">%s</a> · %s · '
                '<a href="mailto:syninasoft@gmail.com">syninasoft@gmail.com</a></footer>'
-               % (esc(t['support']), esc(t['privacy']), esc(t['by'])))
+               % (cmp_name(code), esc(t['compare']), esc(t['support']), esc(t['privacy']), esc(t['by'])))
     out.append('</main>\n</body>\n</html>\n')
+    return '\n'.join(out)
+
+
+CMP_CSS = """
+.tw{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--card)}
+table{border-collapse:collapse;width:100%;min-width:620px;font-size:15px}
+th,td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--line)}
+thead th{font-size:13px;color:var(--soft)}
+tbody tr:last-child th,tbody tr:last-child td{border-bottom:0}
+.note{font-size:14px;color:var(--soft);margin-top:28px}
+"""
+
+
+def render_compare(lc):
+    """공정 비교 페이지. 사실은 compare_l10n.APPS(스토어 확인값), 문장은 compare_l10n.C."""
+    code, hreflang, htmllang, locale, cc, hl, name = lc
+    c, t = C[code], L[code]
+    fill = lambda x: x.format(**c['tok'])
+    alts = '\n'.join('<link rel="alternate" hreflang="%s" href="%s">' % (x[1], cmp_url(x[0])) for x in LANGS)
+    alts += '\n<link rel="alternate" hreflang="x-default" href="%s">' % cmp_url('en')
+    nav = ' '.join(('<b>%s</b>' % esc(x[6])) if x[0] == code else
+                   '<a href="%s" hreflang="%s" lang="%s">%s</a>' % (cmp_name(x[0]), x[1], x[2], esc(x[6]))
+                   for x in LANGS)
+
+    def table(keys):
+        rows = []
+        for k in keys:
+            a = APPS[k]
+            nm = esc(a['name'])
+            if k == 'rallystat':
+                nm = '<a href="%s">%s</a>' % (page_name(code), nm)
+            rows.append('<tr><th scope="row">%s</th><td>%s</td><td>%s</td><td>%s</td></tr>'
+                        % (nm, esc(c['best'][k]), esc(fill(a['plat'])), esc(fill(a['price']))))
+        head = ''.join('<th scope="col">%s</th>' % esc(h) for h in c['th'])
+        return '<div class="tw"><table><thead><tr>%s</tr></thead><tbody>%s</tbody></table></div>' % (head, ''.join(rows))
+
+    keys = GLOBAL + LOCAL.get(code, [])
+    ld = {'@context': 'https://schema.org', '@type': 'ItemList', 'name': c['h1'], 'inLanguage': htmllang,
+          'itemListElement': [{'@type': 'ListItem', 'position': i + 1,
+                               'item': {'@type': 'SoftwareApplication', 'name': APPS[k]['name'],
+                                        'applicationCategory': 'SportsApplication',
+                                        'operatingSystem': fill(APPS[k]['plat']),
+                                        'description': c['best'][k], 'url': APPS[k]['src'][0]}}
+                              for i, k in enumerate(keys)]}
+    out = ['<!doctype html>\n<html lang="%s">\n<head>\n<meta charset="utf-8">' % htmllang,
+           '<meta name="viewport" content="width=device-width, initial-scale=1">',
+           '<title>%s</title>' % esc(c['title']),
+           '<meta name="description" content="%s">' % esc(c['meta']),
+           '<link rel="canonical" href="%s">' % cmp_url(code), alts,
+           '<meta property="og:type" content="article">',
+           '<meta property="og:title" content="%s">' % esc(c['title']),
+           '<meta property="og:description" content="%s">' % esc(c['meta']),
+           '<meta name="color-scheme" content="light dark">',
+           '<style>%s%s</style>' % (CSS.strip(), CMP_CSS),
+           '<script type="application/ld+json">\n%s\n</script>'
+           % json.dumps(ld, ensure_ascii=False, indent=1).replace('</', '<\\/'),
+           '</head>\n<body>\n<main>',
+           '<nav class="langs" aria-label="%s">%s</nav>' % (esc(t['langs']), nav),
+           '<h1>%s</h1>' % esc(c['h1']),
+           '<p class="lead">%s</p>' % esc(c['intro']),
+           table(GLOBAL)]
+    if LOCAL.get(code):
+        out += ['<h2>%s</h2>' % esc(c['local_h']), table(LOCAL[code])]
+    out += ['<h2>%s</h2>' % esc(c['fit_h']), '<p>%s</p>' % esc(c['fit']),
+            '<h2>%s</h2>' % esc(c['choose_h']),
+            '<ul>%s</ul>' % ''.join('<li>%s</li>' % esc(x) for x in c['choose']),
+            '<p class="note">%s</p>' % esc(c['note']),
+            '<footer><a href="%s">%s</a> · <a href="support.html">%s</a> · <a href="privacy.html">%s</a> · %s</footer>'
+            % (page_name(code), esc(c['back']), esc(t['support']), esc(t['privacy']), esc(t['by'])),
+            '</main>\n</body>\n</html>\n']
     return '\n'.join(out)
 
 
@@ -184,6 +265,9 @@ def sitemap():
     alts += '\n    <xhtml:link rel="alternate" hreflang="x-default" href="%s"/>' % BASE
     urls = ''.join('\n  <url>\n    <loc>%s</loc>\n    <lastmod>%s</lastmod>%s\n  </url>' % (url(x[0]), TODAY, alts)
                    for x in LANGS)
+    calts = ''.join('\n    <xhtml:link rel="alternate" hreflang="%s" href="%s"/>' % (x[1], cmp_url(x[0])) for x in LANGS)
+    urls += ''.join('\n  <url>\n    <loc>%s</loc>\n    <lastmod>%s</lastmod>%s\n  </url>' % (cmp_url(x[0]), TODAY, calts)
+                    for x in LANGS)
     for extra in ('support.html', 'privacy.html'):
         urls += '\n  <url>\n    <loc>%s%s</loc>\n  </url>' % (BASE, extra)
     return ('<?xml version="1.0" encoding="UTF-8"?>\n'
@@ -192,9 +276,10 @@ def sitemap():
 
 
 def main():
-    assert set(L) == {x[0] for x in LANGS}
+    assert set(L) == {x[0] for x in LANGS} == set(C)
     for lc in LANGS:
         io.open(os.path.join(ROOT, page_name(lc[0])), 'w', encoding='utf-8', newline='\n').write(render(lc))
+        io.open(os.path.join(ROOT, cmp_name(lc[0])), 'w', encoding='utf-8', newline='\n').write(render_compare(lc))
     io.open(os.path.join(ROOT, 'sitemap.xml'), 'w', encoding='utf-8', newline='\n').write(sitemap())
     io.open(os.path.join(ROOT, 'robots.txt'), 'w', encoding='utf-8', newline='\n').write(
         'User-agent: *\nAllow: /\n\nSitemap: %ssitemap.xml\n' % BASE)
