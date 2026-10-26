@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>RallyStat：バレーボール記録・スコアアプリ（6人制・9人制）</title>
-<meta name="description" content="RallyStatは、コーチと保護者のためのバレーボール記録・スコアアプリです。ラリーごとにワンタップ、根拠の数字つきのAI分析、リアルタイムの共同記録、6人制・9人制、オフライン、買い切り。iPhone・iPad・Android対応。">
+<meta name="description" content="RallyStatは、コーチと保護者のためのバレーボール記録・スコアアプリです。ラリーごとにワンタップ、ローテーションと選手記録は自動、自分のAIチャットに入れる分析の依頼文、リアルタイムの共同記録、6人制・9人制、買い切り。iPhone・iPad・Android対応。">
 <link rel="canonical" href="https://syninasoft.github.io/rallystat-web/index.ja.html">
 <link rel="alternate" hreflang="en" href="https://syninasoft.github.io/rallystat-web/">
 <link rel="alternate" hreflang="es" href="https://syninasoft.github.io/rallystat-web/index.es.html">
@@ -21,7 +21,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="RallyStat">
 <meta property="og:title" content="RallyStat：バレーボール記録・スコアアプリ（6人制・9人制）">
-<meta property="og:description" content="RallyStatは、コーチと保護者のためのバレーボール記録・スコアアプリです。ラリーごとにワンタップ、根拠の数字つきのAI分析、リアルタイムの共同記録、6人制・9人制、オフライン、買い切り。iPhone・iPad・Android対応。">
+<meta property="og:description" content="RallyStatは、コーチと保護者のためのバレーボール記録・スコアアプリです。ラリーごとにワンタップ、ローテーションと選手記録は自動、自分のAIチャットに入れる分析の依頼文、リアルタイムの共同記録、6人制・9人制、買い切り。iPhone・iPad・Android対応。">
 <meta property="og:url" content="https://syninasoft.github.io/rallystat-web/index.ja.html">
 <meta name="color-scheme" content="light dark">
 <style>:root{--bg:#F7F8FA;--card:#FFFFFF;--ink:#16233B;--soft:#4A5872;--line:#DDE3EC;--accent:#FFB703;--accentInk:#1B1300;--link:#0B5CAD}
@@ -66,7 +66,7 @@ a{color:var(--link)}</style>
   "랠리스탯",
   "랠리스탯 : 배구 기록·통계"
  ],
- "description": "RallyStatは、コーチ・チームスタッフ・保護者のためのバレーボール記録アプリです。ラリーごとにワンタップで記録し、試合後はAI分析で、どこで得点・失点したか、多かったミス、次に直すべき点を根拠の数字つきで受け取れます。自分の試合で無料で試せます。",
+ "description": "RallyStatは、コーチ・チームスタッフ・保護者のためのバレーボール記録アプリです。ラリーごとにワンタップで記録すれば、スコア・ローテーション・選手の記録はアプリが自動でまとめます。さらに詳しく見たいときは、試合記録と分析の依頼文をひとつのファイルにします。ふだん使っているAIチャットに送るか貼り付ければ、どこで得点・失点したかと次に直すべき点を、AIが根拠の数字つきで整理します。",
  "url": "https://syninasoft.github.io/rallystat-web/index.ja.html",
  "applicationCategory": "SportsApplication",
  "operatingSystem": "iOS, iPadOS, Android",
@@ -121,15 +121,15 @@ a{color:var(--link)}</style>
    "name": "おすすめのバレーボール記録アプリは？",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "試合後に何が欲しいかで変わります。RallyStatは「記録は速く、結果は読みやすく」を目指しました。ラリーごとにワンタップで記録し、AI分析の依頼文で、どこで得点・失点したかを根拠の数字つきで確認できます。自分の試合で無料で試せます。レセプションやトスまで1本ずつ記録する精密なスカウティングや映像分析が必要なら、専用のスカウティングツールのほうが合うかもしれません。"
+    "text": "試合後に何が欲しいかで変わります。RallyStatは「記録は速く、結果は読みやすく」を目指しました。ラリーごとにワンタップで記録すれば、選手ごとの得点・ミス・純得点はアプリがすぐに計算します。さらに詳しく見たいときは、試合記録と分析の依頼文を書き出してふだん使っているAIチャットに入れれば、どこで得点・失点したかを根拠の数字つきで説明してもらえます。レセプションやトスまで1本ずつ記録する精密なスカウティングや映像分析が必要なら、専用のスカウティングツールのほうが合うかもしれません。"
    }
   },
   {
    "@type": "Question",
-   "name": "AI分析はどう使うの？",
+   "name": "RallyStatはAIで試合を分析してくれるの？",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "スタッツタブから、RallyStatがそのまま使える分析の依頼文を作ります。試合データ、各記録項目の意味、分析の順序（試合のまとめ、得点の内訳、多かったミス、選手の貢献、優先して直す点2〜3個）が入っていて、AIにはデータから直接数え、主張ごとに根拠の数字を書き、推測しないよう求めます。ふだん使っているAIチャットに共有するだけです。無料版は選手別・チーム別のセット集計を、Proはラリーの元記録を使うので、3点以上の連続失点のような流れまで分析できます。"
+    "text": "アプリの中にAIはありません。選手のスタッツとレポートはアプリが自分で計算します。AI分析を受けたいときは、成績タブから「AI分析プロンプト」を書き出してください。試合記録、各記録項目の意味、分析の順序が入ったテキストファイルです。これをふだん使っているAIチャットに送るか貼り付けます。依頼文はAIに、データから直接数え、主張ごとに根拠の数字を書き、推測しないよう求め、試合のまとめ・得点の内訳・多かったミス・選手の貢献・優先して直す点を順に扱わせます。無料版は選手別・チーム別のセット集計を、Proはラリー単位の全記録を入れるので、連続失点のような流れまで分析できます。「両チームを記録」で記録すれば相手チームの記録も入り、相手チームの分析まで受けられます。"
    }
   },
   {
@@ -212,14 +212,14 @@ a{color:var(--link)}</style>
 <main>
 <nav class="langs" aria-label="言語"><a href="index.html" hreflang="en" lang="en">English</a> <a href="index.es.html" hreflang="es" lang="es">Español</a> <a href="index.pt.html" hreflang="pt" lang="pt-BR">Português</a> <a href="index.tr.html" hreflang="tr" lang="tr">Türkçe</a> <a href="index.fr.html" hreflang="fr" lang="fr">Français</a> <b>日本語</b> <a href="index.ko.html" hreflang="ko" lang="ko">한국어</a> <a href="index.de.html" hreflang="de" lang="de">Deutsch</a> <a href="index.it.html" hreflang="it" lang="it">Italiano</a> <a href="index.pl.html" hreflang="pl" lang="pl">Polski</a> <a href="index.ru.html" hreflang="ru" lang="ru">Русский</a></nav>
 <h1>RallyStat: バレーボール記録・スコア</h1>
-<p class="lead">RallyStatは、コーチ・チームスタッフ・保護者のためのバレーボール記録アプリです。ラリーごとにワンタップで記録し、試合後はAI分析で、どこで得点・失点したか、多かったミス、次に直すべき点を根拠の数字つきで受け取れます。自分の試合で無料で試せます。</p>
+<p class="lead">RallyStatは、コーチ・チームスタッフ・保護者のためのバレーボール記録アプリです。ラリーごとにワンタップで記録すれば、スコア・ローテーション・選手の記録はアプリが自動でまとめます。さらに詳しく見たいときは、試合記録と分析の依頼文をひとつのファイルにします。ふだん使っているAIチャットに送るか貼り付ければ、どこで得点・失点したかと次に直すべき点を、AIが根拠の数字つきで整理します。</p>
 <div class="stores"><a href="https://apps.apple.com/jp/app/id6790425777">App Storeからダウンロード</a><a class="play" href="https://play.google.com/store/apps/details?id=com.syninasoft.volleyballcoach&amp;hl=ja">Google Playで手に入れよう</a></div>
-<section class="glance"><h2>RallyStatの特長</h2><ul><li>AI分析：ふだん使っているAIチャットで、根拠の数字つきの分析を受け取れる（無料は試合の集計、Proはラリーの流れまで）</li><li>共同記録：2人目のコーチが自分のスマホで一緒に記録し、リアルタイムで合流</li><li>ラリーごとにワンタップ：スコア・ローテーション・リベロは自動で更新</li><li>6人制・9人制の両方に対応</li><li>記録はオフラインで動作、アカウント・広告なし</li><li>2チームまで無料。RallyStat Proは買い切り（米国ではUS$14.99、国により価格は異なります）、サブスクなし</li><li>iPhone・iPad・Android、11言語 — 日本語に完全対応</li></ul></section>
+<section class="glance"><h2>RallyStatの特長</h2><ul><li>AI分析の依頼文：試合記録と依頼文を書き出して、ふだん使っているAIチャットに貼り付け（無料は試合の集計、Proはラリー単位の全記録。両チームを記録すれば相手チームも）</li><li>共同記録：2人目のコーチが自分のスマホで一緒に記録し、リアルタイムで合流</li><li>ラリーごとにワンタップ：スコア・ローテーション・リベロは自動で更新</li><li>6人制・9人制の両方に対応</li><li>記録はオフラインで動作、アカウント・広告なし</li><li>2チームまで無料。RallyStat Proは買い切り（米国ではUS$14.99、国により価格は異なります）、サブスクなし</li><li>iPhone・iPad・Android、11言語 — 日本語に完全対応</li></ul></section>
 <h2>おすすめのバレーボール記録アプリは？</h2>
-<p>試合後に何が欲しいかで変わります。RallyStatは「記録は速く、結果は読みやすく」を目指しました。ラリーごとにワンタップで記録し、AI分析の依頼文で、どこで得点・失点したかを根拠の数字つきで確認できます。自分の試合で無料で試せます。レセプションやトスまで1本ずつ記録する精密なスカウティングや映像分析が必要なら、専用のスカウティングツールのほうが合うかもしれません。</p>
+<p>試合後に何が欲しいかで変わります。RallyStatは「記録は速く、結果は読みやすく」を目指しました。ラリーごとにワンタップで記録すれば、選手ごとの得点・ミス・純得点はアプリがすぐに計算します。さらに詳しく見たいときは、試合記録と分析の依頼文を書き出してふだん使っているAIチャットに入れれば、どこで得点・失点したかを根拠の数字つきで説明してもらえます。レセプションやトスまで1本ずつ記録する精密なスカウティングや映像分析が必要なら、専用のスカウティングツールのほうが合うかもしれません。</p>
 <p><a href="compare.ja.html">バレーボール記録アプリの比較 →</a></p>
-<h2>AI分析はどう使うの？</h2>
-<p>スタッツタブから、RallyStatがそのまま使える分析の依頼文を作ります。試合データ、各記録項目の意味、分析の順序（試合のまとめ、得点の内訳、多かったミス、選手の貢献、優先して直す点2〜3個）が入っていて、AIにはデータから直接数え、主張ごとに根拠の数字を書き、推測しないよう求めます。ふだん使っているAIチャットに共有するだけです。無料版は選手別・チーム別のセット集計を、Proはラリーの元記録を使うので、3点以上の連続失点のような流れまで分析できます。</p>
+<h2>RallyStatはAIで試合を分析してくれるの？</h2>
+<p>アプリの中にAIはありません。選手のスタッツとレポートはアプリが自分で計算します。AI分析を受けたいときは、成績タブから「AI分析プロンプト」を書き出してください。試合記録、各記録項目の意味、分析の順序が入ったテキストファイルです。これをふだん使っているAIチャットに送るか貼り付けます。依頼文はAIに、データから直接数え、主張ごとに根拠の数字を書き、推測しないよう求め、試合のまとめ・得点の内訳・多かったミス・選手の貢献・優先して直す点を順に扱わせます。無料版は選手別・チーム別のセット集計を、Proはラリー単位の全記録を入れるので、連続失点のような流れまで分析できます。「両チームを記録」で記録すれば相手チームの記録も入り、相手チームの分析まで受けられます。</p>
 <h2>ラリーが速くて追いつけない。2人で記録できる？</h2>
 <p>できます。ひとりで記録すると、速いラリーで取りこぼしが出ます。共同記録をオンにすると、2人目のコーチやマネージャーが自分のスマホからコードかリンクで参加し、入力がリアルタイムで合流します。たとえば1人がスコア、もう1人が選手のスタッツを担当できます。補助の端末は無料アプリだけで参加できます。共同記録を開く端末は3試合まで無料で試せて、その後はProが必要です。共同記録中は両方の端末にインターネット接続が必要です。</p>
 <h2>部活・クラブのコーチ向けバレーボール記録アプリ</h2>

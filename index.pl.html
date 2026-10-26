@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>RallyStat: aplikacja do statystyk siatkówki i protokół meczu dla trenerów i rodziców</title>
-<meta name="description" content="RallyStat to aplikacja do statystyk siatkówki dla trenerów i rodziców na iPhone, iPad i Android. Jedno dotknięcie na akcję, analiza AI poparta liczbami, wspólny zapis na żywo, offline, jednorazowy zakup.">
+<meta name="description" content="RallyStat to aplikacja do statystyk siatkówki dla trenerów i rodziców na iPhone, iPad i Android. Jedno dotknięcie na akcję, automatyczna rotacja i statystyki zawodników, prośba o analizę dla Twojego czatu AI, wspólny zapis na żywo, offline, jednorazowy zakup.">
 <link rel="canonical" href="https://syninasoft.github.io/rallystat-web/index.pl.html">
 <link rel="alternate" hreflang="en" href="https://syninasoft.github.io/rallystat-web/">
 <link rel="alternate" hreflang="es" href="https://syninasoft.github.io/rallystat-web/index.es.html">
@@ -21,7 +21,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="RallyStat">
 <meta property="og:title" content="RallyStat: aplikacja do statystyk siatkówki i protokół meczu dla trenerów i rodziców">
-<meta property="og:description" content="RallyStat to aplikacja do statystyk siatkówki dla trenerów i rodziców na iPhone, iPad i Android. Jedno dotknięcie na akcję, analiza AI poparta liczbami, wspólny zapis na żywo, offline, jednorazowy zakup.">
+<meta property="og:description" content="RallyStat to aplikacja do statystyk siatkówki dla trenerów i rodziców na iPhone, iPad i Android. Jedno dotknięcie na akcję, automatyczna rotacja i statystyki zawodników, prośba o analizę dla Twojego czatu AI, wspólny zapis na żywo, offline, jednorazowy zakup.">
 <meta property="og:url" content="https://syninasoft.github.io/rallystat-web/index.pl.html">
 <meta name="color-scheme" content="light dark">
 <style>:root{--bg:#F7F8FA;--card:#FFFFFF;--ink:#16233B;--soft:#4A5872;--line:#DDE3EC;--accent:#FFB703;--accentInk:#1B1300;--link:#0B5CAD}
@@ -66,7 +66,7 @@ a{color:var(--link)}</style>
   "랠리스탯",
   "랠리스탯 : 배구 기록·통계"
  ],
- "description": "RallyStat to aplikacja do statystyk siatkówki dla trenerów, sztabu i rodziców. Zapisuj każdą akcję jednym dotknięciem, a po meczu otrzymaj analizę AI: jak zdobywano i tracono punkty, najczęstsze błędy i nad czym pracować dalej, z liczbami na poparcie. Wypróbuj za darmo na własnym meczu.",
+ "description": "RallyStat to aplikacja do statystyk siatkówki dla trenerów, sztabu i rodziców. Zapisuj każdą akcję jednym dotknięciem, a wynik, rotację i statystyki zawodników aplikacja prowadzi sama. Jeśli chcesz zajrzeć głębiej, RallyStat eksportuje zapis meczu razem z gotową prośbą o analizę. Wyślij ją do czatu AI, którego już używasz, a AI rozpisze, jak zdobywano i tracono punkty i nad czym pracować dalej, z liczbami na poparcie.",
  "url": "https://syninasoft.github.io/rallystat-web/index.pl.html",
  "applicationCategory": "SportsApplication",
  "operatingSystem": "iOS, iPadOS, Android",
@@ -121,15 +121,15 @@ a{color:var(--link)}</style>
    "name": "Jaka jest najlepsza aplikacja do statystyk siatkówki?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "To zależy od tego, czego potrzebujesz po meczu. RallyStat ma być szybki w zapisie i łatwy w czytaniu: jedno dotknięcie na akcję, a potem prośba o analizę dla AI, która pokazuje, gdzie zdobyto i stracono punkty, z liczbami na poparcie. Wypróbuj za darmo na własnym meczu. Jeśli potrzebujesz scoutingu każdego dotknięcia albo analizy wideo, lepiej sprawdzi się wyspecjalizowane narzędzie do scoutingu."
+    "text": "To zależy od tego, czego potrzebujesz po meczu. RallyStat ma być szybki w zapisie i łatwy w czytaniu: jedno dotknięcie na akcję, a aplikacja od razu liczy punkty, błędy i bilans każdego zawodnika. Jeśli chcesz zajrzeć głębiej, eksportuje mecz z prośbą o analizę dla Twojego czatu AI, który wyjaśnia z liczbami, gdzie zdobyto i stracono punkty. Jeśli potrzebujesz scoutingu każdego dotknięcia albo analizy wideo, lepiej sprawdzi się wyspecjalizowane narzędzie do scoutingu."
    }
   },
   {
    "@type": "Question",
-   "name": "Jak działa analiza AI?",
+   "name": "Czy RallyStat analizuje mecze za pomocą AI?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "Na karcie statystyk RallyStat przygotowuje gotową prośbę o analizę: dane meczu, znaczenie każdej statystyki i kolejność analizy: podsumowanie meczu, skład zdobytych punktów, najczęstsze błędy, wkład zawodników i 2–3 priorytety treningowe. Prosi AI, by liczyła bezpośrednio z danych, podawała liczbę przy każdym stwierdzeniu i niczego nie zgadywała. Wystarczy udostępnić ją w czacie AI, którego używasz. Wersja darmowa korzysta z sum dla zawodników i drużyn w każdym secie; Pro korzysta z pełnego zapisu akcji, więc znajduje też serie trzech lub więcej straconych punktów z rzędu."
+    "text": "W aplikacji nie ma AI: statystyki i raporty aplikacja liczy sama. Aby uzyskać analizę AI, wyeksportuj prompt analizy AI z karty statystyk. To plik tekstowy z zapisem meczu, znaczeniem każdej statystyki i kolejnością analizy. Wyślij go lub wklej do czatu AI, którego już używasz. Prośba każe AI liczyć bezpośrednio z danych, podawać liczbę przy każdym stwierdzeniu i niczego nie zgadywać, i prowadzi ją przez podsumowanie meczu, skład zdobytych punktów, najczęstsze błędy, wkład zawodników i priorytety treningowe. W wersji darmowej plik zawiera sumy dla zawodników i drużyn w każdym secie. Z Pro zawiera pełny zapis akcja po akcji, więc analiza może też śledzić przebieg, np. serie straconych punktów. Jeśli zapisujesz w trybie „Obie drużyny”, w zapisie są też akcje rywala i analiza obejmuje również jego."
    }
   },
   {
@@ -212,14 +212,14 @@ a{color:var(--link)}</style>
 <main>
 <nav class="langs" aria-label="Języki"><a href="index.html" hreflang="en" lang="en">English</a> <a href="index.es.html" hreflang="es" lang="es">Español</a> <a href="index.pt.html" hreflang="pt" lang="pt-BR">Português</a> <a href="index.tr.html" hreflang="tr" lang="tr">Türkçe</a> <a href="index.fr.html" hreflang="fr" lang="fr">Français</a> <a href="index.ja.html" hreflang="ja" lang="ja">日本語</a> <a href="index.ko.html" hreflang="ko" lang="ko">한국어</a> <a href="index.de.html" hreflang="de" lang="de">Deutsch</a> <a href="index.it.html" hreflang="it" lang="it">Italiano</a> <b>Polski</b> <a href="index.ru.html" hreflang="ru" lang="ru">Русский</a></nav>
 <h1>RallyStat: Protokół siatkówki</h1>
-<p class="lead">RallyStat to aplikacja do statystyk siatkówki dla trenerów, sztabu i rodziców. Zapisuj każdą akcję jednym dotknięciem, a po meczu otrzymaj analizę AI: jak zdobywano i tracono punkty, najczęstsze błędy i nad czym pracować dalej, z liczbami na poparcie. Wypróbuj za darmo na własnym meczu.</p>
+<p class="lead">RallyStat to aplikacja do statystyk siatkówki dla trenerów, sztabu i rodziców. Zapisuj każdą akcję jednym dotknięciem, a wynik, rotację i statystyki zawodników aplikacja prowadzi sama. Jeśli chcesz zajrzeć głębiej, RallyStat eksportuje zapis meczu razem z gotową prośbą o analizę. Wyślij ją do czatu AI, którego już używasz, a AI rozpisze, jak zdobywano i tracono punkty i nad czym pracować dalej, z liczbami na poparcie.</p>
 <div class="stores"><a href="https://apps.apple.com/pl/app/id6790425777">Pobierz w App Store</a><a class="play" href="https://play.google.com/store/apps/details?id=com.syninasoft.volleyballcoach&amp;hl=pl">Pobierz z Google Play</a></div>
-<section class="glance"><h2>RallyStat w skrócie</h2><ul><li>Analiza AI: wnioski poparte liczbami z czatu AI, którego już używasz (za darmo na podstawie sum meczu; Pro dodaje przebieg akcja po akcji)</li><li>Wspólny zapis: drugi trener zapisuje na własnym telefonie, a wszystko łączy się na żywo</li><li>Jedno dotknięcie na akcję: wynik, rotacja i libero aktualizują się same</li><li>Siatkówka 6- i 9-osobowa</li><li>Zapis działa offline, bez konta i bez reklam</li><li>Za darmo do 2 drużyn; RallyStat Pro to jednorazowy zakup, 14,99 USD w USA (ceny zależą od kraju), bez subskrypcji</li><li>iPhone, iPad i Android, w 11 językach — w pełni po polsku</li></ul></section>
+<section class="glance"><h2>RallyStat w skrócie</h2><ul><li>Prośba o analizę AI: wyeksportuj mecz z gotową prośbą i wklej ją do swojego czatu AI (za darmo: sumy meczu; Pro: pełny zapis akcja po akcji, łącznie z rywalem, jeśli zapisujesz obie drużyny)</li><li>Wspólny zapis: drugi trener zapisuje na własnym telefonie, a wszystko łączy się na żywo</li><li>Jedno dotknięcie na akcję: wynik, rotacja i libero aktualizują się same</li><li>Siatkówka 6- i 9-osobowa</li><li>Zapis działa offline, bez konta i bez reklam</li><li>Za darmo do 2 drużyn; RallyStat Pro to jednorazowy zakup, 14,99 USD w USA (ceny zależą od kraju), bez subskrypcji</li><li>iPhone, iPad i Android, w 11 językach — w pełni po polsku</li></ul></section>
 <h2>Jaka jest najlepsza aplikacja do statystyk siatkówki?</h2>
-<p>To zależy od tego, czego potrzebujesz po meczu. RallyStat ma być szybki w zapisie i łatwy w czytaniu: jedno dotknięcie na akcję, a potem prośba o analizę dla AI, która pokazuje, gdzie zdobyto i stracono punkty, z liczbami na poparcie. Wypróbuj za darmo na własnym meczu. Jeśli potrzebujesz scoutingu każdego dotknięcia albo analizy wideo, lepiej sprawdzi się wyspecjalizowane narzędzie do scoutingu.</p>
+<p>To zależy od tego, czego potrzebujesz po meczu. RallyStat ma być szybki w zapisie i łatwy w czytaniu: jedno dotknięcie na akcję, a aplikacja od razu liczy punkty, błędy i bilans każdego zawodnika. Jeśli chcesz zajrzeć głębiej, eksportuje mecz z prośbą o analizę dla Twojego czatu AI, który wyjaśnia z liczbami, gdzie zdobyto i stracono punkty. Jeśli potrzebujesz scoutingu każdego dotknięcia albo analizy wideo, lepiej sprawdzi się wyspecjalizowane narzędzie do scoutingu.</p>
 <p><a href="compare.pl.html">Porównanie aplikacji do statystyk siatkówki →</a></p>
-<h2>Jak działa analiza AI?</h2>
-<p>Na karcie statystyk RallyStat przygotowuje gotową prośbę o analizę: dane meczu, znaczenie każdej statystyki i kolejność analizy: podsumowanie meczu, skład zdobytych punktów, najczęstsze błędy, wkład zawodników i 2–3 priorytety treningowe. Prosi AI, by liczyła bezpośrednio z danych, podawała liczbę przy każdym stwierdzeniu i niczego nie zgadywała. Wystarczy udostępnić ją w czacie AI, którego używasz. Wersja darmowa korzysta z sum dla zawodników i drużyn w każdym secie; Pro korzysta z pełnego zapisu akcji, więc znajduje też serie trzech lub więcej straconych punktów z rzędu.</p>
+<h2>Czy RallyStat analizuje mecze za pomocą AI?</h2>
+<p>W aplikacji nie ma AI: statystyki i raporty aplikacja liczy sama. Aby uzyskać analizę AI, wyeksportuj prompt analizy AI z karty statystyk. To plik tekstowy z zapisem meczu, znaczeniem każdej statystyki i kolejnością analizy. Wyślij go lub wklej do czatu AI, którego już używasz. Prośba każe AI liczyć bezpośrednio z danych, podawać liczbę przy każdym stwierdzeniu i niczego nie zgadywać, i prowadzi ją przez podsumowanie meczu, skład zdobytych punktów, najczęstsze błędy, wkład zawodników i priorytety treningowe. W wersji darmowej plik zawiera sumy dla zawodników i drużyn w każdym secie. Z Pro zawiera pełny zapis akcja po akcji, więc analiza może też śledzić przebieg, np. serie straconych punktów. Jeśli zapisujesz w trybie „Obie drużyny”, w zapisie są też akcje rywala i analiza obejmuje również jego.</p>
 <h2>Akcje są szybkie. Czy dwie osoby mogą zapisywać razem?</h2>
 <p>Tak. Zapisując w pojedynkę, przy szybkich akcjach coś umyka. Dzięki wspólnemu zapisowi drugi trener lub kierownik drużyny dołącza z własnego telefonu za pomocą kodu lub linku, a wpisy łączą się na żywo: na przykład jedna osoba prowadzi wynik, a druga statystyki zawodników. Telefon pomocniczy potrzebuje tylko darmowej aplikacji. Urządzenie główne może uruchomić wspólny zapis za darmo przez 3 mecze, potem z Pro. Gdy jest włączony, oba telefony potrzebują internetu.</p>
 <h2>Aplikacja do statystyk siatkówki dla trenerów klubowych i szkolnych</h2>

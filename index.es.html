@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>RallyStat: app de estadísticas de voleibol y marcador para entrenadores y padres</title>
-<meta name="description" content="RallyStat es una app de estadísticas de voleibol para entrenadores y padres en iPhone, iPad y Android. Un toque por jugada, análisis con IA respaldado por números, registro compartido en vivo, sin conexión, pago único.">
+<meta name="description" content="RallyStat es una app de estadísticas de voleibol para entrenadores y padres en iPhone, iPad y Android. Un toque por jugada, rotación y estadísticas de jugadores automáticas, una solicitud de análisis para tu propio chat de IA, registro compartido en vivo, sin conexión, pago único.">
 <link rel="canonical" href="https://syninasoft.github.io/rallystat-web/index.es.html">
 <link rel="alternate" hreflang="en" href="https://syninasoft.github.io/rallystat-web/">
 <link rel="alternate" hreflang="es" href="https://syninasoft.github.io/rallystat-web/index.es.html">
@@ -21,7 +21,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="RallyStat">
 <meta property="og:title" content="RallyStat: app de estadísticas de voleibol y marcador para entrenadores y padres">
-<meta property="og:description" content="RallyStat es una app de estadísticas de voleibol para entrenadores y padres en iPhone, iPad y Android. Un toque por jugada, análisis con IA respaldado por números, registro compartido en vivo, sin conexión, pago único.">
+<meta property="og:description" content="RallyStat es una app de estadísticas de voleibol para entrenadores y padres en iPhone, iPad y Android. Un toque por jugada, rotación y estadísticas de jugadores automáticas, una solicitud de análisis para tu propio chat de IA, registro compartido en vivo, sin conexión, pago único.">
 <meta property="og:url" content="https://syninasoft.github.io/rallystat-web/index.es.html">
 <meta name="color-scheme" content="light dark">
 <style>:root{--bg:#F7F8FA;--card:#FFFFFF;--ink:#16233B;--soft:#4A5872;--line:#DDE3EC;--accent:#FFB703;--accentInk:#1B1300;--link:#0B5CAD}
@@ -66,7 +66,7 @@ a{color:var(--link)}</style>
   "랠리스탯",
   "랠리스탯 : 배구 기록·통계"
  ],
- "description": "RallyStat es una app de estadísticas de voleibol para entrenadores, cuerpo técnico y padres. Registra cada jugada con un toque y, al terminar el partido, obtén un análisis con IA: cómo se ganaron y perdieron los puntos, los errores más frecuentes y qué trabajar después, con los números que lo respaldan. Pruébala gratis con tu propio partido.",
+ "description": "RallyStat es una app de estadísticas de voleibol para entrenadores, cuerpo técnico y padres. Registra cada jugada con un toque y la app lleva el marcador, la rotación y las estadísticas de los jugadores por ti. Para un análisis más profundo, RallyStat exporta tu partido junto con una solicitud de análisis lista para usar. Envíala al chat de IA que ya usas y la IA desglosa cómo se ganaron y perdieron los puntos y qué trabajar después, con los números que lo respaldan.",
  "url": "https://syninasoft.github.io/rallystat-web/index.es.html",
  "applicationCategory": "SportsApplication",
  "operatingSystem": "iOS, iPadOS, Android",
@@ -121,15 +121,15 @@ a{color:var(--link)}</style>
    "name": "¿Cuál es la mejor app de estadísticas de voleibol?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "Depende de lo que necesites después del partido. RallyStat busca ser rápida de registrar y fácil de leer: un toque por jugada y luego una solicitud de análisis para la IA que muestra dónde se ganaron y perdieron los puntos, con los números que lo respaldan. Pruébala gratis con tu propio partido. Si necesitas scouting toque a toque o análisis de vídeo, una herramienta de scouting específica puede encajarte mejor."
+    "text": "Depende de lo que necesites después del partido. RallyStat busca ser rápida de registrar y fácil de leer: un toque por jugada y la app calcula al momento los puntos, errores y puntos netos de cada jugador. Para un análisis más profundo, exporta tu partido con una solicitud de análisis para tu chat de IA, que explica con números dónde se ganaron y perdieron los puntos. Si necesitas scouting toque a toque o análisis de vídeo, una herramienta de scouting específica puede encajarte mejor."
    }
   },
   {
    "@type": "Question",
-   "name": "¿Cómo funciona el análisis con IA?",
+   "name": "¿RallyStat analiza los partidos con IA?",
    "acceptedAnswer": {
     "@type": "Answer",
-    "text": "Desde la pestaña de estadísticas, RallyStat prepara una solicitud de análisis lista para usar: los datos del partido, qué significa cada estadística y el orden del análisis: resumen del partido, cómo se lograron los puntos, errores más frecuentes, aporte de cada jugador y 2 o 3 prioridades para entrenar. Pide a la IA que cuente a partir de los datos, respalde cada afirmación con un número y no suponga nada. Solo compártela con el chat de IA que uses. La versión gratuita usa los totales por jugador y por equipo de cada set; Pro usa el registro completo de jugadas, así que también detecta rachas de tres o más puntos perdidos seguidos."
+    "text": "La app no lleva IA dentro: las estadísticas y los informes los calcula la propia app. Para un análisis con IA, exporta el prompt de análisis de IA desde la pestaña de estadísticas. Es un archivo de texto con tu partido, qué significa cada estadística y el orden del análisis. Envíalo o pégalo en el chat de IA que ya usas. La solicitud pide a la IA que cuente a partir de los datos, respalde cada afirmación con un número y no suponga nada, y la guía por el resumen del partido, cómo se lograron los puntos, los errores más frecuentes, el aporte de los jugadores y las prioridades de entrenamiento. En el plan gratuito el archivo contiene los totales por jugador y por equipo de cada set. Con Pro contiene el registro completo jugada a jugada, así que el análisis también puede seguir la dinámica, como las rachas de puntos perdidos. Si registras con \"Registrar ambos equipos\", las acciones del rival también están en el registro y el análisis las cubre."
    }
   },
   {
@@ -212,14 +212,14 @@ a{color:var(--link)}</style>
 <main>
 <nav class="langs" aria-label="Idiomas"><a href="index.html" hreflang="en" lang="en">English</a> <b>Español</b> <a href="index.pt.html" hreflang="pt" lang="pt-BR">Português</a> <a href="index.tr.html" hreflang="tr" lang="tr">Türkçe</a> <a href="index.fr.html" hreflang="fr" lang="fr">Français</a> <a href="index.ja.html" hreflang="ja" lang="ja">日本語</a> <a href="index.ko.html" hreflang="ko" lang="ko">한국어</a> <a href="index.de.html" hreflang="de" lang="de">Deutsch</a> <a href="index.it.html" hreflang="it" lang="it">Italiano</a> <a href="index.pl.html" hreflang="pl" lang="pl">Polski</a> <a href="index.ru.html" hreflang="ru" lang="ru">Русский</a></nav>
 <h1>RallyStat: Estadísticas Vóley</h1>
-<p class="lead">RallyStat es una app de estadísticas de voleibol para entrenadores, cuerpo técnico y padres. Registra cada jugada con un toque y, al terminar el partido, obtén un análisis con IA: cómo se ganaron y perdieron los puntos, los errores más frecuentes y qué trabajar después, con los números que lo respaldan. Pruébala gratis con tu propio partido.</p>
+<p class="lead">RallyStat es una app de estadísticas de voleibol para entrenadores, cuerpo técnico y padres. Registra cada jugada con un toque y la app lleva el marcador, la rotación y las estadísticas de los jugadores por ti. Para un análisis más profundo, RallyStat exporta tu partido junto con una solicitud de análisis lista para usar. Envíala al chat de IA que ya usas y la IA desglosa cómo se ganaron y perdieron los puntos y qué trabajar después, con los números que lo respaldan.</p>
 <div class="stores"><a href="https://apps.apple.com/es/app/id6790425777">Descargar en App Store</a><a class="play" href="https://play.google.com/store/apps/details?id=com.syninasoft.volleyballcoach&amp;hl=es">Disponible en Google Play</a></div>
-<section class="glance"><h2>RallyStat en resumen</h2><ul><li>Análisis con IA: conclusiones respaldadas por números desde el chat de IA que ya usas (gratis con los totales del partido; Pro añade el desarrollo jugada a jugada)</li><li>Registro compartido: un segundo entrenador registra desde su propio teléfono y todo se une en vivo</li><li>Un toque por jugada: el marcador, la rotación y el líbero se actualizan solos</li><li>Voleibol de 6 y de 9 jugadores</li><li>El registro funciona sin conexión, sin cuenta y sin anuncios</li><li>Gratis hasta 2 equipos; RallyStat Pro es un pago único, US$14,99 en EE. UU. (el precio varía según el país), sin suscripción</li><li>iPhone, iPad y Android, en 11 idiomas — totalmente en español</li></ul></section>
+<section class="glance"><h2>RallyStat en resumen</h2><ul><li>Solicitud de análisis con IA: exporta el partido con una solicitud lista y pégala en tu chat de IA (gratis: totales del partido; Pro: el registro completo jugada a jugada, rival incluido si registras ambos equipos)</li><li>Registro compartido: un segundo entrenador registra desde su propio teléfono y todo se une en vivo</li><li>Un toque por jugada: el marcador, la rotación y el líbero se actualizan solos</li><li>Voleibol de 6 y de 9 jugadores</li><li>El registro funciona sin conexión, sin cuenta y sin anuncios</li><li>Gratis hasta 2 equipos; RallyStat Pro es un pago único, US$14,99 en EE. UU. (el precio varía según el país), sin suscripción</li><li>iPhone, iPad y Android, en 11 idiomas — totalmente en español</li></ul></section>
 <h2>¿Cuál es la mejor app de estadísticas de voleibol?</h2>
-<p>Depende de lo que necesites después del partido. RallyStat busca ser rápida de registrar y fácil de leer: un toque por jugada y luego una solicitud de análisis para la IA que muestra dónde se ganaron y perdieron los puntos, con los números que lo respaldan. Pruébala gratis con tu propio partido. Si necesitas scouting toque a toque o análisis de vídeo, una herramienta de scouting específica puede encajarte mejor.</p>
+<p>Depende de lo que necesites después del partido. RallyStat busca ser rápida de registrar y fácil de leer: un toque por jugada y la app calcula al momento los puntos, errores y puntos netos de cada jugador. Para un análisis más profundo, exporta tu partido con una solicitud de análisis para tu chat de IA, que explica con números dónde se ganaron y perdieron los puntos. Si necesitas scouting toque a toque o análisis de vídeo, una herramienta de scouting específica puede encajarte mejor.</p>
 <p><a href="compare.es.html">Comparativa de apps de estadísticas de voleibol →</a></p>
-<h2>¿Cómo funciona el análisis con IA?</h2>
-<p>Desde la pestaña de estadísticas, RallyStat prepara una solicitud de análisis lista para usar: los datos del partido, qué significa cada estadística y el orden del análisis: resumen del partido, cómo se lograron los puntos, errores más frecuentes, aporte de cada jugador y 2 o 3 prioridades para entrenar. Pide a la IA que cuente a partir de los datos, respalde cada afirmación con un número y no suponga nada. Solo compártela con el chat de IA que uses. La versión gratuita usa los totales por jugador y por equipo de cada set; Pro usa el registro completo de jugadas, así que también detecta rachas de tres o más puntos perdidos seguidos.</p>
+<h2>¿RallyStat analiza los partidos con IA?</h2>
+<p>La app no lleva IA dentro: las estadísticas y los informes los calcula la propia app. Para un análisis con IA, exporta el prompt de análisis de IA desde la pestaña de estadísticas. Es un archivo de texto con tu partido, qué significa cada estadística y el orden del análisis. Envíalo o pégalo en el chat de IA que ya usas. La solicitud pide a la IA que cuente a partir de los datos, respalde cada afirmación con un número y no suponga nada, y la guía por el resumen del partido, cómo se lograron los puntos, los errores más frecuentes, el aporte de los jugadores y las prioridades de entrenamiento. En el plan gratuito el archivo contiene los totales por jugador y por equipo de cada set. Con Pro contiene el registro completo jugada a jugada, así que el análisis también puede seguir la dinámica, como las rachas de puntos perdidos. Si registras con &quot;Registrar ambos equipos&quot;, las acciones del rival también están en el registro y el análisis las cubre.</p>
 <h2>Las jugadas son rápidas. ¿Pueden registrar dos personas a la vez?</h2>
 <p>Sí. Quien registra solo pierde acciones cuando las jugadas van rápido. Con el registro compartido, un segundo entrenador o delegado se une desde su propio teléfono con un código o un enlace, y las entradas se combinan en vivo: por ejemplo, uno lleva el marcador y otro las estadísticas de los jugadores. El teléfono de apoyo solo necesita la app gratuita. El dispositivo principal puede iniciar el registro compartido gratis durante 3 partidos y después con Pro. Mientras está activo, ambos teléfonos necesitan conexión a internet.</p>
 <h2>App de estadísticas de voleibol para entrenadores de club y colegio</h2>
