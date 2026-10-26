@@ -66,15 +66,16 @@ def store_copy(locale):
 
 def sections(desc):
     """스토어 설명 → (첫 문단, [(제목, [항목])], 맺음말). 6번째 문단(기기·언어 줄)은 쓰지 않는다 — 웹은 Android도 있다."""
+    # 10-27 GEO 보강으로 포지셔닝 문단·현지어 지원·웹 주소 문단이 더해졌다 → 목록 문단(• 항목)만 골라 쓴다
     paras = [p.strip() for p in desc.split('\n\n') if p.strip()]
-    assert len(paras) == 8, len(paras)
     secs = []
-    for p in paras[1:6]:
+    for p in paras[1:-1]:
         lines = p.split('\n')
         items = [x[1:].strip() for x in lines[1:] if x.startswith('•')]
-        assert items, p[:40]
-        secs.append((lines[0].strip(), items))
-    return paras[0], secs, paras[7]
+        if items:
+            secs.append((lines[0].strip(), items))
+    assert len(secs) == 5, len(secs)
+    return paras[0], secs, paras[-1]
 
 
 CSS = """
