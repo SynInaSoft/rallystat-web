@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://syninasoft.github.io/rallystat-web/sitemap.xml

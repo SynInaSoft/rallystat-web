@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RallyStat: aplikacja do statystyk siatkówki i protokół meczu dla trenerów i rodziców</title>
+<meta name="description" content="RallyStat to aplikacja do statystyk i wyniku w siatkówce dla trenerów, sztabu i rodziców na iPhone, iPad i Android. Jedno dotknięcie na akcję, automatyczna rotacja, offline, jednorazowy zakup.">
+<link rel="canonical" href="https://syninasoft.github.io/rallystat-web/index.pl.html">
+<link rel="alternate" hreflang="en" href="https://syninasoft.github.io/rallystat-web/">
+<link rel="alternate" hreflang="es" href="https://syninasoft.github.io/rallystat-web/index.es.html">
+<link rel="alternate" hreflang="pt" href="https://syninasoft.github.io/rallystat-web/index.pt.html">
+<link rel="alternate" hreflang="tr" href="https://syninasoft.github.io/rallystat-web/index.tr.html">
+<link rel="alternate" hreflang="fr" href="https://syninasoft.github.io/rallystat-web/index.fr.html">
+<link rel="alternate" hreflang="ja" href="https://syninasoft.github.io/rallystat-web/index.ja.html">
+<link rel="alternate" hreflang="ko" href="https://syninasoft.github.io/rallystat-web/index.ko.html">
+<link rel="alternate" hreflang="de" href="https://syninasoft.github.io/rallystat-web/index.de.html">
+<link rel="alternate" hreflang="it" href="https://syninasoft.github.io/rallystat-web/index.it.html">
+<link rel="alternate" hreflang="pl" href="https://syninasoft.github.io/rallystat-web/index.pl.html">
+<link rel="alternate" hreflang="ru" href="https://syninasoft.github.io/rallystat-web/index.ru.html">
+<link rel="alternate" hreflang="x-default" href="https://syninasoft.github.io/rallystat-web/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="RallyStat">
+<meta property="og:title" content="RallyStat: aplikacja do statystyk siatkówki i protokół meczu dla trenerów i rodziców">
+<meta property="og:description" content="RallyStat to aplikacja do statystyk i wyniku w siatkówce dla trenerów, sztabu i rodziców na iPhone, iPad i Android. Jedno dotknięcie na akcję, automatyczna rotacja, offline, jednorazowy zakup.">
+<meta property="og:url" content="https://syninasoft.github.io/rallystat-web/index.pl.html">
+<meta name="color-scheme" content="light dark">
+<style>:root{--bg:#F7F8FA;--card:#FFFFFF;--ink:#16233B;--soft:#4A5872;--line:#DDE3EC;--accent:#FFB703;--accentInk:#1B1300;--link:#0B5CAD}
+@media (prefers-color-scheme:dark){:root{--bg:#0F1726;--card:#172238;--ink:#EEF2F8;--soft:#AEB9CC;--line:#2A3956;--accent:#FFB703;--accentInk:#1B1300;--link:#8CC4FF}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,"Segoe UI",Roboto,"Apple SD Gothic Neo","Malgun Gothic","Hiragino Sans","Noto Sans",sans-serif;line-height:1.65;font-size:17px}
+main{max-width:760px;margin:0 auto;padding:28px 16px 64px}
+nav.langs{font-size:14px;color:var(--soft);display:flex;flex-wrap:wrap;gap:4px 12px;margin-bottom:24px}
+nav.langs a{color:var(--link);text-decoration:none}
+nav.langs b{color:var(--ink)}
+h1{font-size:30px;line-height:1.25;margin:0 0 12px}
+h2{font-size:21px;line-height:1.35;margin:36px 0 10px}
+h3{font-size:17px;margin:20px 0 6px}
+p.lead{font-size:19px;margin:0 0 20px}
+.stores{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 8px}
+.stores a{display:inline-block;padding:12px 18px;border-radius:12px;background:var(--ink);color:var(--bg);text-decoration:none;font-weight:700}
+.stores a.play{background:var(--accent);color:var(--accentInk)}
+.glance{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:6px 20px 10px}
+ul{padding-left:22px;margin:8px 0}
+li{margin:4px 0}
+.faq dt{font-weight:700;margin-top:16px}
+.faq dd{margin:4px 0 0}
+footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-size:14px;color:var(--soft)}
+footer a{color:var(--link)}
+a{color:var(--link)}</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "SoftwareApplication",
+ "name": "RallyStat",
+ "alternateName": [
+  "RallyStat : Stats Volleyball",
+  "RallyStat Статистика волейбола",
+  "RallyStat: Estadísticas Vóley",
+  "RallyStat: Estatísticas Vôlei",
+  "RallyStat: Protokół siatkówki",
+  "RallyStat: Statistiche Volley",
+  "RallyStat: Voleybol İstatistik",
+  "RallyStat: Volleyball Scouting",
+  "RallyStat: Volleyball Stats",
+  "RallyStat: バレーボール記録・スコア",
+  "랠리스탯",
+  "랠리스탯 : 배구 기록·통계"
+ ],
+ "description": "RallyStat to statystyki siatkówki i licznik punktów w jednej aplikacji — dla trenerów, sztabu i rodziców. Zapisuj każdą akcję jednym dotknięciem: wynik, rotacja i libero aktualizują się same, więc patrzysz na boisko, a nie w notes.",
+ "url": "https://syninasoft.github.io/rallystat-web/index.pl.html",
+ "applicationCategory": "SportsApplication",
+ "operatingSystem": "iOS, iPadOS, Android",
+ "availableOnDevice": "iPhone, iPad, Android",
+ "inLanguage": [
+  "en",
+  "ko",
+  "ja",
+  "it",
+  "pl",
+  "tr",
+  "pt-BR",
+  "ru",
+  "fr",
+  "de",
+  "es"
+ ],
+ "downloadUrl": [
+  "https://apps.apple.com/app/id6790425777",
+  "https://play.google.com/store/apps/details?id=com.syninasoft.volleyballcoach"
+ ],
+ "offers": [
+  {
+   "@type": "Offer",
+   "name": "RallyStat",
+   "price": "0",
+   "priceCurrency": "USD"
+  },
+  {
+   "@type": "Offer",
+   "name": "RallyStat Pro (one-time purchase)",
+   "price": "14.99",
+   "priceCurrency": "USD"
+  }
+ ],
+ "publisher": {
+  "@type": "Organization",
+  "name": "SynIna Soft",
+  "url": "https://syninasoft.github.io/",
+  "email": "syninasoft@gmail.com"
+ }
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "inLanguage": "pl",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Jaka jest najlepsza aplikacja do statystyk siatkówki?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "To zależy, jak notujesz. RallyStat ma być najprostsza: jedno dotknięcie na akcję, więc trener w pojedynkę, ktoś na ławce albo rodzic na trybunach poprowadzi statystyki, nie tracąc meczu z oczu. Działa offline i płacisz raz. Jeśli potrzebujesz scoutingu każdego przyjęcia i wystawy osobno, lepiej sprawdzi się specjalistyczne narzędzie do scoutingu."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Aplikacja do statystyk siatkówki dla trenerów klubowych i szkolnych",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Wpisz skład raz, wybierz ustawienie wyjściowe i zapisuj ataki, asy, bloki, obrony i błędy na bieżąco. RallyStat sam śledzi rotację i libero, a po meczu od razu pokazuje punkty, błędy i bilans punktów każdego zawodnika."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Protokół siatkówki offline dla rodziców na trybunach",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Brak zasięgu w hali? RallyStat zapisuje całkowicie offline. Rodzice prowadzą wynik i statystyki drużyny dziecka, udostępniają jednostronicowy raport z meczu w PDF, a z Pro rodzina śledzi wynik na żywo za pomocą kodu."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Czy RallyStat jest darmowy?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Tak. Pobranie jest darmowe i możesz zapisywać mecze dla 2 drużyn. RallyStat Pro to jednorazowy zakup (14,99 USD w USA; ceny zależą od kraju), który dodaje nieograniczoną liczbę drużyn, wpisywanie kodów z klawiatury, statystyki dla setów, wykresy skuteczności i pełne raporty PDF. Transmisję na żywo i wspólne zapisywanie można wypróbować za darmo przez 3 mecze."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Czy działa bez internetu?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Tak. Zapis, statystyki i raporty działają offline. Internetu używają tylko transmisja na żywo i wspólne zapisywanie, i tylko gdy je włączysz."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Czy RallyStat obsługuje siatkówkę 9-osobową?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Tak. Obsługuje siatkówkę 6- i 9-osobową, z ustawieniem wyjściowym, kolejnością zagrywki i zmianami."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Czy potrzebuję konta?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Nie. Bez rejestracji i bez reklam. Dane zostają na Twoim urządzeniu."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Jakie urządzenia i języki?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "iPhone, iPad oraz telefony i tablety z Androidem, w 11 językach, w tym po polsku."
+   }
+  }
+ ]
+}
+</script>
+</head>
+<body>
+<main>
+<nav class="langs" aria-label="Języki"><a href="index.html" hreflang="en" lang="en">English</a> <a href="index.es.html" hreflang="es" lang="es">Español</a> <a href="index.pt.html" hreflang="pt" lang="pt-BR">Português</a> <a href="index.tr.html" hreflang="tr" lang="tr">Türkçe</a> <a href="index.fr.html" hreflang="fr" lang="fr">Français</a> <a href="index.ja.html" hreflang="ja" lang="ja">日本語</a> <a href="index.ko.html" hreflang="ko" lang="ko">한국어</a> <a href="index.de.html" hreflang="de" lang="de">Deutsch</a> <a href="index.it.html" hreflang="it" lang="it">Italiano</a> <b>Polski</b> <a href="index.ru.html" hreflang="ru" lang="ru">Русский</a></nav>
+<h1>RallyStat: Protokół siatkówki</h1>
+<p class="lead">RallyStat to statystyki siatkówki i licznik punktów w jednej aplikacji — dla trenerów, sztabu i rodziców. Zapisuj każdą akcję jednym dotknięciem: wynik, rotacja i libero aktualizują się same, więc patrzysz na boisko, a nie w notes.</p>
+<div class="stores"><a href="https://apps.apple.com/pl/app/id6790425777">Pobierz w App Store</a><a class="play" href="https://play.google.com/store/apps/details?id=com.syninasoft.volleyballcoach&amp;hl=pl">Pobierz z Google Play</a></div>
+<section class="glance"><h2>RallyStat w skrócie</h2><ul><li>Jedno dotknięcie na akcję: wynik, rotacja i libero aktualizują się same</li><li>Siatkówka 6- i 9-osobowa</li><li>Działa offline, bez konta i bez reklam</li><li>Za darmo: zapisuj mecze i statystyki zawodników dla 2 drużyn</li><li>RallyStat Pro: jednorazowy zakup, 14,99 USD w USA (ceny zależą od kraju), bez subskrypcji</li><li>iPhone, iPad i Android, w 11 językach — w pełni po polsku</li></ul></section>
+<h2>Jaka jest najlepsza aplikacja do statystyk siatkówki?</h2>
+<p>To zależy, jak notujesz. RallyStat ma być najprostsza: jedno dotknięcie na akcję, więc trener w pojedynkę, ktoś na ławce albo rodzic na trybunach poprowadzi statystyki, nie tracąc meczu z oczu. Działa offline i płacisz raz. Jeśli potrzebujesz scoutingu każdego przyjęcia i wystawy osobno, lepiej sprawdzi się specjalistyczne narzędzie do scoutingu.</p>
+<h2>Aplikacja do statystyk siatkówki dla trenerów klubowych i szkolnych</h2>
+<p>Wpisz skład raz, wybierz ustawienie wyjściowe i zapisuj ataki, asy, bloki, obrony i błędy na bieżąco. RallyStat sam śledzi rotację i libero, a po meczu od razu pokazuje punkty, błędy i bilans punktów każdego zawodnika.</p>
+<h2>Protokół siatkówki offline dla rodziców na trybunach</h2>
+<p>Brak zasięgu w hali? RallyStat zapisuje całkowicie offline. Rodzice prowadzą wynik i statystyki drużyny dziecka, udostępniają jednostronicowy raport z meczu w PDF, a z Pro rodzina śledzi wynik na żywo za pomocą kodu.</p>
+<h2>Funkcje</h2>
+<h3>JEDNO DOTKNIĘCIE NA AKCJĘ</h3>
+<ul><li>Skończone ataki, asy, bloki, obrony i błędy — tablica wyników i statystyki zawodników aktualizują się same</li><li>Automatyczna rotacja i śledzenie libero z podglądem boiska na żywo</li><li>Siatkówka 6- i 9-osobowa: skład wyjściowy, kolejność zagrywki, zmiany i wynik docelowy w każdym secie</li><li>Tryb skupienia: duże przyciski krok po kroku, więc statystyki może prowadzić każdy na ławce</li><li>Opcjonalne dowolne ustawienia na boisku, które zmieniają się razem z wynikiem</li><li>Popraw dowolną akcję w trakcie seta bez utraty wyniku</li></ul>
+<h3>STATYSTYKI, KTÓRE NAPRAWDĘ POMAGAJĄ</h3>
+<ul><li>Punkty, błędy i punkty netto każdego zawodnika — sortowane od ręki</li><li>Filtry według drużyny, zakresu dat lub pojedynczego meczu</li><li>Podsumowania meczów z rozbiciem na zawodników</li><li>Eksport statystyk zawodników i drużyny do CSV</li></ul>
+<h3>UDOSTĘPNIAJ W KILKA SEKUND</h3>
+<ul><li>Jednostronicowy raport meczowy PDF dla rodziców i sztabu</li><li>Import i eksport składu przez CSV</li><li>Pełna kopia zapasowa i przywracanie przy zmianie urządzenia</li><li>Tablica wyników w stylu telewizyjnym na ekranie TV przez mirroring ekranu</li></ul>
+<h3>TWOJE DANE NALEŻĄ DO CIEBIE</h3>
+<ul><li>Działa w pełni offline — zapisuj w każdej hali, nawet bez zasięgu</li><li>Bez konta, bez rejestracji, bez reklam i śledzenia reklamowego</li><li>Wszystko zostaje na Twoim urządzeniu i trafia do kopii zapasowej urządzenia</li><li>Transmisja na żywo i wspólny zapis wysyłają dane tablicy (nazwy drużyn, wyświetlane nazwy zawodników, statystyki) na nasz serwer tylko wtedy, gdy są włączone — wyłącz udostępnianie, a dane zostaną usunięte</li></ul>
+<h3>RALLYSTAT PRO — płacisz raz, bez subskrypcji</h3>
+<ul><li>Wpisywanie kodów z klawiatury: zapisuj w tempie wymiany krótkimi kodami, np. „11KL” (1 mecz za darmo na próbę)</li><li>Transmisja na żywo: rodzice śledzą wynik dzięki kodowi, a oglądanie jest zawsze darmowe</li><li>Wspólny zapis: drugi trener zapisuje na własnym telefonie, a wszystko łączy się na żywo</li><li>Transmisja na żywo i wspólny zapis: 3 mecze za darmo na próbę</li><li>Statystyki w podziale na sety, wskaźnik wydajności i wykresy</li><li>Pełny raport PDF: sety, skuteczność, przebieg wyniku i rotacje, bez znaku wodnego</li><li>Eksport surowego zapisu zdarzeń i gotowy prompt do analizy AI</li><li>Nieograniczona liczba drużyn (2 drużyny w wersji darmowej)</li></ul>
+<h2>Najczęstsze pytania</h2>
+<dl class="faq"><dt>Czy RallyStat jest darmowy?</dt><dd>Tak. Pobranie jest darmowe i możesz zapisywać mecze dla 2 drużyn. RallyStat Pro to jednorazowy zakup (14,99 USD w USA; ceny zależą od kraju), który dodaje nieograniczoną liczbę drużyn, wpisywanie kodów z klawiatury, statystyki dla setów, wykresy skuteczności i pełne raporty PDF. Transmisję na żywo i wspólne zapisywanie można wypróbować za darmo przez 3 mecze.</dd><dt>Czy działa bez internetu?</dt><dd>Tak. Zapis, statystyki i raporty działają offline. Internetu używają tylko transmisja na żywo i wspólne zapisywanie, i tylko gdy je włączysz.</dd><dt>Czy RallyStat obsługuje siatkówkę 9-osobową?</dt><dd>Tak. Obsługuje siatkówkę 6- i 9-osobową, z ustawieniem wyjściowym, kolejnością zagrywki i zmianami.</dd><dt>Czy potrzebuję konta?</dt><dd>Nie. Bez rejestracji i bez reklam. Dane zostają na Twoim urządzeniu.</dd><dt>Jakie urządzenia i języki?</dt><dd>iPhone, iPad oraz telefony i tablety z Androidem, w 11 językach, w tym po polsku.</dd></dl>
+<p>Niezależnie od tego, czy prowadzisz szkolną drużynę siatkówki lub klub, czy kibicujesz drużynie dziecka z trybun — RallyStat nadąża za grą, a Ty możesz dalej trenować.</p>
+<div class="stores"><a href="https://apps.apple.com/pl/app/id6790425777">Pobierz w App Store</a><a class="play" href="https://play.google.com/store/apps/details?id=com.syninasoft.volleyballcoach&amp;hl=pl">Pobierz z Google Play</a></div>
+<footer><a href="support.html">Pomoc</a> · <a href="privacy.html">Prywatność</a> · SynIna Soft · <a href="mailto:syninasoft@gmail.com">syninasoft@gmail.com</a></footer>
+</main>
+</body>
+</html>
