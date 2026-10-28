@@ -287,3 +287,22 @@ F['tr'] = dict(
     codes=('Deneyimli istatistikçiler için: kodla giriş',
            'Zaten kodlarla kayıt tutuyorsanız, Pro klavyeyle kod girişini ekler: profesyonel analistlerin kullandığı tarzda kısa kodlarla, örneğin "11KL", ralli hızında kayıt tutarsınız. Bir maç boyunca ücretsiz deneyin.'),
 )
+
+# 경험 문장(10-28 재원님 "넣어줘", 총괄 전달): 양 팀을 기록한 실제 경기 로그로 시험한 결과. AI 질문(qa[1]) 답 끝에 붙인다.
+# 근거: 요청문 점검(volleyball-coach 82a32e7) 뒤 시험에서 양 팀 강약점·가장 강한/약한 로테이션·경기 중 대응·훈련이 나옴.
+AI_TESTED = {
+    'en': "In tests with real match logs that included both teams, the AI analysis pointed out each team's strengths and weaknesses and its strongest and weakest rotations, with the numbers behind them, and suggested in-match adjustments and practice drills.",
+    'ko': '양 팀을 모두 기록한 실제 경기 로그로 시험해 보니, AI 분석이 양 팀의 강점과 약점, 가장 강한 로테이션과 가장 약한 로테이션을 근거 숫자와 함께 짚고, 경기 중 대응과 훈련까지 추천해 줬습니다.',
+    'ja': '両チームを記録した実際の試合ログで試したところ、AI分析は両チームの強みと弱み、最も強いローテーションと最も弱いローテーションを根拠の数字とともに指摘し、試合中の対応と練習メニューまで提案しました。',
+    'de': 'In Tests mit echten Spielprotokollen, in denen beide Teams erfasst waren, zeigte die KI-Analyse die Stärken und Schwächen jedes Teams sowie seine stärksten und schwächsten Rotationen mit den zugehörigen Zahlen und schlug Anpassungen während des Spiels und Trainingsübungen vor.',
+    'fr': "Lors de tests avec de vrais journaux de match où les deux équipes étaient notées, l'analyse IA a relevé les points forts et faibles de chaque équipe ainsi que ses meilleures et ses moins bonnes rotations, chiffres à l'appui, et a proposé des ajustements en cours de match et des exercices d'entraînement.",
+    'it': "Nei test con registri reali di partite in cui erano state registrate entrambe le squadre, l'analisi IA ha indicato punti di forza e debolezze di ciascuna squadra e le sue rotazioni migliori e peggiori, con i numeri a supporto, e ha suggerito aggiustamenti durante la partita ed esercizi di allenamento.",
+    'es': 'En pruebas con registros reales de partidos en los que se anotaron ambos equipos, el análisis con IA señaló las fortalezas y debilidades de cada equipo y sus rotaciones más fuertes y más débiles, con los números que lo respaldan, y sugirió ajustes durante el partido y ejercicios de entrenamiento.',
+    'pt': 'Em testes com registros reais de partidas em que os dois times foram registrados, a análise de IA apontou os pontos fortes e fracos de cada time e seus rodízios mais fortes e mais fracos, com os números por trás, e sugeriu ajustes durante a partida e exercícios de treino.',
+    'pl': 'W testach na prawdziwych zapisach meczów, w których zapisano obie drużyny, analiza AI wskazała mocne i słabe strony każdej drużyny oraz jej najmocniejsze i najsłabsze rotacje, podając stojące za tym liczby, i zaproponowała zmiany w trakcie meczu oraz ćwiczenia treningowe.',
+    'ru': 'В тестах на реальных журналах матчей, где были записаны обе команды, ИИ-анализ указал сильные и слабые стороны каждой команды и её самые сильные и самые слабые расстановки с цифрами в подтверждение, а также предложил действия по ходу матча и тренировочные упражнения.',
+    'tr': 'Her iki takımın da kaydedildiği gerçek maç kayıtlarıyla yapılan testlerde yapay zekâ analizi, her takımın güçlü ve zayıf yönlerini ve en güçlü ve en zayıf rotasyonlarını arkasındaki sayılarla birlikte gösterdi; maç içi müdahaleler ve antrenman alıştırmaları önerdi.',
+}
+for _k, _t in AI_TESTED.items():
+    _q, _a = F[_k]['qa'][1]
+    F[_k]['qa'][1] = (_q, _a + ' ' + _t)
