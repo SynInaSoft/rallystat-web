@@ -19,7 +19,9 @@ from compare_l10n import APPS, GLOBAL, LOCAL, C  # noqa: E402
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 APP = os.path.join(os.path.dirname(ROOT), 'volleyball-coach')
 BASE = 'https://syninasoft.github.io/rallystat-web/'
-TODAY = '2026-10-27'
+TODAY = '2026-11-15'  # 소개 페이지 갱신일(sitemap lastmod·JSON-LD dateModified)
+CMP_DATE = '2026-10-27'  # 비교 페이지는 그대로
+PRINT_URL = 'https://syninasoft.github.io/rallyboard-web/volleyball-rotation-sheets.html'
 ASC_ID = '6790425777'
 PKG = 'com.syninasoft.volleyballcoach'
 
@@ -117,6 +119,9 @@ def jsonld(code, t, copy, lead):
         'operatingSystem': 'iOS, iPadOS, Android',
         'availableOnDevice': 'iPhone, iPad, Android',
         'inLanguage': ['en', 'ko', 'ja', 'it', 'pl', 'tr', 'pt-BR', 'ru', 'fr', 'de', 'es'],
+        'sameAs': ['https://apps.apple.com/app/id%s' % ASC_ID,
+                   'https://play.google.com/store/apps/details?id=%s' % PKG],
+        'dateModified': TODAY,
         'downloadUrl': ['https://apps.apple.com/app/id%s' % ASC_ID,
                         'https://play.google.com/store/apps/details?id=%s' % PKG],
         'offers': [
@@ -183,6 +188,7 @@ def render(lc):
         out.append('<h3>%s</h3>\n<ul>%s</ul>' % (esc(h), ''.join('<li>%s</li>' % esc(i) for i in items)))
     out.append('<h2>%s</h2>\n<dl class="faq">%s</dl>'
                % (esc(t['faq_h']), ''.join('<dt>%s</dt><dd>%s</dd>' % (esc(q), esc(a)) for q, a in t['faq'])))
+    out.append('<p><a href="%s">%s →</a></p>' % (PRINT_URL, esc(t['print'])))
     out.append('<p>%s</p>' % esc(closing))
     out.append(stores)
     out.append('<footer><a href="%s">%s</a> · <a href="support.html">%s</a> · <a href="privacy.html">%s</a> · %s · '
@@ -268,7 +274,7 @@ def sitemap():
     urls = ''.join('\n  <url>\n    <loc>%s</loc>\n    <lastmod>%s</lastmod>%s\n  </url>' % (url(x[0]), TODAY, alts)
                    for x in LANGS)
     calts = ''.join('\n    <xhtml:link rel="alternate" hreflang="%s" href="%s"/>' % (x[1], cmp_url(x[0])) for x in LANGS)
-    urls += ''.join('\n  <url>\n    <loc>%s</loc>\n    <lastmod>%s</lastmod>%s\n  </url>' % (cmp_url(x[0]), TODAY, calts)
+    urls += ''.join('\n  <url>\n    <loc>%s</loc>\n    <lastmod>%s</lastmod>%s\n  </url>' % (cmp_url(x[0]), CMP_DATE, calts)
                     for x in LANGS)
     for extra in ('support.html', 'privacy.html'):
         urls += '\n  <url>\n    <loc>%s%s</loc>\n  </url>' % (BASE, extra)

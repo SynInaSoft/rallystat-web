@@ -320,3 +320,14 @@ for _k, _f in F.items():
     _coach, _parents = L[_k]['qa']
     L[_k].update(meta=_f['meta'], glance=_f['glance'], lead=_f['lead'],
                  qa=_f['qa'] + [(_coach[0], _coach[1] + ' ' + _f['tested']), _parents, _f['codes']])
+
+# 11-15 GEO 구별 신호(geo_l10n.py): 첫 문장 교체, 한눈에 6·9인제 줄에 비치, FAQ 맨 앞 '웹앱?'·9인제 다음 '비치?'.
+import re as _re  # noqa: E402
+from geo_l10n import G  # noqa: E402
+for _k, _g in G.items():
+    _rest = _re.split(r'(?<=[.。])\s*', L[_k]['lead'], maxsplit=1)[1]
+    L[_k]['lead'] = _g['first'] + ('' if _k == 'ja' else ' ') + _rest
+    L[_k]['glance'] = [(_g['glance69'] if i == 3 else x) for i, x in enumerate(L[_k]['glance'])]
+    _f = L[_k]['faq']
+    L[_k]['faq'] = [_g['webapp']] + _f[:3] + [_g['beach']] + _f[3:]
+    L[_k]['print'] = _g['print']

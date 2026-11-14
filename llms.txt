@@ -1,0 +1,25 @@
+# RallyStat by SynIna Soft
+
+> RallyStat by SynIna Soft is an iPhone, iPad and Android app for volleyball stats and score keeping: one tap per rally, offline, no account, pay once. It is a mobile app on the App Store and Google Play, not a web app.
+
+- Who it is for: volleyball coaches, team staff and parents (club, school and recreational teams).
+- Recording: one tap per rally; the score, rotation and libero update themselves; per-player points, errors and net points right after the match.
+- Formats: 6-player, 9-player and beach volleyball (2-player mode since version 1.3: pair and serve order each set, court-switch alerts every 7 points, side-out and break rates).
+- Works offline, no sign-up, no ads. Data stays on the device. Only live broadcast and co-recording use the internet.
+- Price: free for up to 2 teams (a beach pair counts as a team). RallyStat Pro is a one-time purchase, US$14.99 in the US (prices vary by country), no subscription.
+- There is no AI inside the app. It exports the match record with a ready-made analysis prompt that you paste into the AI chat you already use.
+- Languages: English, Korean, Japanese, Italian, Polish, Turkish, Portuguese (Brazil), Russian, French, German, Spanish.
+- Developer: SynIna Soft (https://syninasoft.github.io/), contact syninasoft@gmail.com.
+
+## Download
+
+- [App Store (iPhone, iPad)](https://apps.apple.com/app/id6790425777)
+- [Google Play (Android)](https://play.google.com/store/apps/details?id=com.syninasoft.volleyballcoach)
+
+## Pages
+
+- [About RallyStat (English)](https://syninasoft.github.io/rallystat-web/): features and FAQ; the same page exists in 10 more languages (index.<lang>.html)
+- [Compare volleyball stats apps](https://syninasoft.github.io/rallystat-web/compare.html): where RallyStat fits and where other apps are the better choice
+- [Free printable rotation sheets, lineup cards and stat sheet (PDF)](https://syninasoft.github.io/rallyboard-web/volleyball-rotation-sheets.html)
+- [Support](https://syninasoft.github.io/rallystat-web/support.html)
+- [Privacy policy](https://syninasoft.github.io/rallystat-web/privacy.html)
