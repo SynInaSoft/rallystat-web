@@ -1,0 +1,28 @@
+{
+ "T": {
+  "en": "RallyStat: Volleyball Stats & Score Keeper App",
+  "ko": "랠리스탯: 배구 기록·점수 앱",
+  "ja": "RallyStat：バレーボール記録・スコアアプリ",
+  "de": "RallyStat: Volleyball-Statistik & Spielprotokoll App",
+  "fr": "RallyStat : stats de volley et feuille de match",
+  "it": "RallyStat: statistiche pallavolo e segnapunti",
+  "es": "RallyStat: estadísticas de voleibol y marcador",
+  "pt": "RallyStat: estatísticas de vôlei e placar",
+  "pl": "RallyStat: statystyki siatkówki i protokół meczu",
+  "ru": "RallyStat: статистика волейбола и протокол матча",
+  "tr": "RallyStat: voleybol istatistik ve skor takip"
+ },
+ "M": {
+  "en": "Volleyball stats app for coaches and parents on iPhone, iPad and Android. Keep score, rotation and player stats offline. No account, pay once.",
+  "ko": "코치·학부모를 위한 배구 기록 앱. 점수·로테이션·선수 기록을 오프라인으로. 계정 없이, 한 번 구매. iPhone·iPad·Android.",
+  "ja": "コーチと保護者のためのバレーボール記録アプリ。スコア・ローテーション・選手記録をオフラインで。アカウント不要、買い切り。iPhone・iPad・Android対応。",
+  "de": "Volleyball-Statistik-App für Trainer und Eltern auf iPhone, iPad und Android. Spielstand, Rotation und Spielerstatistik offline. Kein Konto, einmal zahlen.",
+  "fr": "Appli de stats de volley pour entraîneurs et parents sur iPhone, iPad et Android. Score, rotation et stats des joueurs hors ligne. Sans compte, achat unique.",
+  "it": "App di statistiche pallavolo per allenatori e genitori su iPhone, iPad e Android. Punteggio, rotazione e statistiche offline. Senza account, acquisto unico.",
+  "es": "App de estadísticas de voleibol para entrenadores y padres en iPhone, iPad y Android. Marcador, rotación y estadísticas sin conexión. Sin cuenta, pago único.",
+  "pt": "App de estatísticas de vôlei para técnicos e pais no iPhone, iPad e Android. Placar, rodízio e estatísticas offline. Sem conta, pagamento único.",
+  "pl": "Statystyki siatkówki dla trenerów i rodziców na iPhone, iPad i Android. Wynik, rotacja i statystyki zawodników offline. Bez konta, jednorazowy zakup.",
+  "ru": "Статистика волейбола для тренеров и родителей на iPhone, iPad и Android. Счёт, расстановка и статистика игроков офлайн. Без аккаунта, разовая покупка.",
+  "tr": "Antrenörler ve veliler için voleybol istatistik uygulaması: iPhone, iPad, Android. Skor, rotasyon ve oyuncu istatistikleri çevrimdışı. Hesap yok, tek ödeme."
+ }
+}

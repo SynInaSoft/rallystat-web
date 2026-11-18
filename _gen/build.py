@@ -16,6 +16,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from l10n import L  # noqa: E402
 from compare_l10n import APPS, GLOBAL, LOCAL, C  # noqa: E402
 from media import captions, SHOT_W  # noqa: E402
+import body_fix  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 APP = os.path.join(os.path.dirname(ROOT), 'volleyball-coach')
@@ -105,7 +106,7 @@ def share_tags(code, alt):
 def shots_html(code):
     h = round(2796 * SHOT_W / 1290)
     figs = ''.join('<img src="img/%s-shot-%d.webp" width="%d" height="%d" alt="%s" loading="%s" decoding="async">'
-                   % (code, n, SHOT_W, h, esc(alt), 'eager' if i == 0 else 'lazy', )
+                   % (code, n, SHOT_W, h, esc(body_fix.fix(code, alt)), 'eager' if i == 0 else 'lazy', )
                    for i, (n, alt) in enumerate(captions()[code]))
     return '<div class="shots">%s</div>' % figs
 
@@ -199,11 +200,25 @@ def jsonld(code, t, copy, lead):
             % (dump(app), dump(faq)))
 
 
+def web_copy(code):
+    """11-18 body_fix: 제목·설명 A안, 본문 '탭 한 번'·em dash 정리(원본 문구 파일은 그대로)."""
+    f = lambda x: body_fix.fix(code, x)
+    t = dict(L[code])
+    t['title'], t['meta'] = body_fix.TITLE[code], body_fix.META[code]
+    t['lead'], t['print'] = f(t['lead']), f(t['print'])
+    t['glance'] = [f(g) for g in t['glance']]
+    t['qa'] = [(f(q), f(a)) for q, a in t['qa']]
+    t['faq'] = [(f(q), f(a)) for q, a in t['faq']]
+    return t
+
+
 def render(lc):
     code, hreflang, htmllang, locale, cc, hl, name = lc
-    t = L[code]
+    t = web_copy(code)
     copy = store_copy(locale)
     _, secs, closing = sections(copy['description'])
+    secs = [(body_fix.fix(code, h), [body_fix.fix(code, i) for i in items]) for h, items in secs]
+    closing = body_fix.fix(code, closing)
     lead = t['lead']  # 첫 화면 소개는 스토어 첫 문단 대신 first_l10n(AI 분석 먼저)
     alts = '\n'.join('<link rel="alternate" hreflang="%s" href="%s">' % (x[1], url(x[0])) for x in LANGS)
     alts += '\n<link rel="alternate" hreflang="x-default" href="%s">' % BASE
@@ -353,6 +368,7 @@ def main():
     io.open(os.path.join(ROOT, 'sitemap.xml'), 'w', encoding='utf-8', newline='\n').write(sitemap())
     io.open(os.path.join(ROOT, 'robots.txt'), 'w', encoding='utf-8', newline='\n').write(
         'User-agent: *\nAllow: /\n\nSitemap: %ssitemap.xml\n' % BASE)
+    body_fix.check()
     print('ok', len(LANGS), 'pages')
 
 
