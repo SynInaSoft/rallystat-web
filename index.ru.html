@@ -23,6 +23,24 @@
 <meta property="og:title" content="RallyStat: приложение для статистики волейбола и протокола матча для тренеров и родителей">
 <meta property="og:description" content="RallyStat — приложение для статистики волейбола для тренеров и родителей на iPhone, iPad и Android. Одно касание на розыгрыш, автоматические расстановка и статистика игроков, запрос на анализ для вашего ИИ-чата, совместная запись в реальном времени, офлайн, разовая покупка.">
 <meta property="og:url" content="https://syninasoft.github.io/rallystat-web/index.ru.html">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="tr_TR">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta property="og:image" content="https://syninasoft.github.io/rallystat-web/img/og-ru.jpg">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="500">
+<meta property="og:image:alt" content="RallyStat — RallyStat Статистика волейбола">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://syninasoft.github.io/rallystat-web/img/og-ru.jpg">
+<meta name="twitter:image:alt" content="RallyStat — RallyStat Статистика волейбола">
 <meta name="color-scheme" content="light dark">
 <style>:root{--bg:#F7F8FA;--card:#FFFFFF;--ink:#16233B;--soft:#4A5872;--line:#DDE3EC;--accent:#FFB703;--accentInk:#1B1300;--link:#0B5CAD}
 @media (prefers-color-scheme:dark){:root{--bg:#0F1726;--card:#172238;--ink:#EEF2F8;--soft:#AEB9CC;--line:#2A3956;--accent:#FFB703;--accentInk:#1B1300;--link:#8CC4FF}}
@@ -39,6 +57,9 @@ p.lead{font-size:19px;margin:0 0 20px}
 .stores{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 8px}
 .stores a{display:inline-block;padding:12px 18px;border-radius:12px;background:var(--ink);color:var(--bg);text-decoration:none;font-weight:700}
 .stores a.play{background:var(--accent);color:var(--accentInk)}
+p.updated{font-size:14px;color:var(--soft);margin:0 0 16px}
+.shots{display:flex;gap:12px;margin:24px 0 8px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+.shots img{flex:0 0 calc((100% - 24px)/3);min-width:150px;max-width:100%;height:auto;border-radius:14px;border:1px solid var(--line);scroll-snap-align:start;background:var(--card)}
 .glance{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:6px 20px 10px}
 ul{padding-left:22px;margin:8px 0}
 li{margin:4px 0}
@@ -88,7 +109,7 @@ a{color:var(--link)}</style>
   "https://apps.apple.com/app/id6790425777",
   "https://play.google.com/store/apps/details?id=com.syninasoft.volleyballcoach"
  ],
- "dateModified": "2026-11-15",
+ "dateModified": "2026-11-18",
  "downloadUrl": [
   "https://apps.apple.com/app/id6790425777",
   "https://play.google.com/store/apps/details?id=com.syninasoft.volleyballcoach"
@@ -233,8 +254,10 @@ a{color:var(--link)}</style>
 <main>
 <nav class="langs" aria-label="Языки"><a href="index.html" hreflang="en" lang="en">English</a> <a href="index.es.html" hreflang="es" lang="es">Español</a> <a href="index.pt.html" hreflang="pt" lang="pt-BR">Português</a> <a href="index.tr.html" hreflang="tr" lang="tr">Türkçe</a> <a href="index.fr.html" hreflang="fr" lang="fr">Français</a> <a href="index.ja.html" hreflang="ja" lang="ja">日本語</a> <a href="index.ko.html" hreflang="ko" lang="ko">한국어</a> <a href="index.de.html" hreflang="de" lang="de">Deutsch</a> <a href="index.it.html" hreflang="it" lang="it">Italiano</a> <a href="index.pl.html" hreflang="pl" lang="pl">Polski</a> <b>Русский</b></nav>
 <h1>RallyStat Статистика волейбола</h1>
+<p class="updated">Последнее обновление: <time datetime="2026-11-18">18 ноября 2026 г.</time></p>
 <p class="lead">RallyStat от SynIna Soft — приложение для iPhone, iPad и Android для статистики и счёта в волейболе: одно касание на розыгрыш, офлайн, без аккаунта, одна покупка. Записывайте каждый розыгрыш одним касанием, а счёт, расстановку и статистику игроков приложение ведёт само. Для более глубокого разбора RallyStat экспортирует запись матча вместе с готовым запросом на анализ. Отправьте его в ИИ-чат, которым вы уже пользуетесь, и ИИ разберёт, как набирались и терялись очки и над чем работать дальше, с подтверждающими цифрами.</p>
 <div class="stores"><a href="https://apps.apple.com/ru/app/id6790425777">Загрузите в App Store</a><a class="play" href="https://play.google.com/store/apps/details?id=com.syninasoft.volleyballcoach&amp;hl=ru">Доступно в Google Play</a></div>
+<div class="shots"><img src="img/ru-shot-2.webp" width="480" height="1040" alt="RallyStat — Записывайте вместе: Ввод со второго устройства объединяется вживую" loading="eager" decoding="async"><img src="img/ru-shot-4.webp" width="480" height="1040" alt="RallyStat — Статистика расскажет историю: Очки, ошибки и вклад игроков" loading="lazy" decoding="async"><img src="img/ru-shot-6.webp" width="480" height="1040" alt="RallyStat — Переходы и либеро — автоматически: Позиции, подача и замены под контролем" loading="lazy" decoding="async"></div>
 <section class="glance"><h2>RallyStat коротко</h2><ul><li>Запрос на анализ ИИ: экспортируйте матч с готовым запросом и вставьте в свой ИИ-чат (бесплатно: итоги матча; Pro: полный журнал по розыгрышам, вместе с соперником, если вы записываете обе команды)</li><li>Совместная запись: второй тренер записывает со своего телефона, и всё объединяется в реальном времени</li><li>Одно касание на розыгрыш: счёт, переход и либеро обновляются сами</li><li>Волейбол 6×6, 9×9 и пляжный (2×2)</li><li>Запись работает офлайн, без аккаунта и рекламы</li><li>Бесплатно до 2 команд; RallyStat Pro — разовая покупка, 14,99 $ в США (цена зависит от страны), без подписки</li><li>iPhone, iPad и Android, 11 языков — полностью на русском</li></ul></section>
 <h2>Какое приложение для статистики волейбола лучшее?</h2>
 <p>Зависит от того, что вам нужно после матча. RallyStat задуман так, чтобы записывать было быстро, а читать легко: одно касание на розыгрыш, и приложение сразу считает очки, ошибки и чистые очки каждого игрока. Для более глубокого разбора оно экспортирует матч с запросом на анализ для вашего ИИ-чата, который с цифрами объяснит, где очки были выиграны и потеряны. Если нужен скаутинг каждого касания или видеоанализ, лучше подойдёт специализированный инструмент для скаутинга.</p>

@@ -23,6 +23,24 @@
 <meta property="og:title" content="RallyStat: volleyball stats app and score keeper for coaches and parents">
 <meta property="og:description" content="RallyStat is a volleyball stats app for coaches and parents on iPhone, iPad and Android. One tap per rally, automatic rotation and player stats, an analysis prompt for your own AI chat, live co-recording, 6- and 9-player, pay once.">
 <meta property="og:url" content="https://syninasoft.github.io/rallystat-web/">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:locale:alternate" content="pt_BR">
+<meta property="og:locale:alternate" content="tr_TR">
+<meta property="og:locale:alternate" content="fr_FR">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:locale:alternate" content="ko_KR">
+<meta property="og:locale:alternate" content="de_DE">
+<meta property="og:locale:alternate" content="it_IT">
+<meta property="og:locale:alternate" content="pl_PL">
+<meta property="og:locale:alternate" content="ru_RU">
+<meta property="og:image" content="https://syninasoft.github.io/rallystat-web/img/og-en.jpg">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="500">
+<meta property="og:image:alt" content="RallyStat — RallyStat: Volleyball Stats">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://syninasoft.github.io/rallystat-web/img/og-en.jpg">
+<meta name="twitter:image:alt" content="RallyStat — RallyStat: Volleyball Stats">
 <meta name="color-scheme" content="light dark">
 <style>:root{--bg:#F7F8FA;--card:#FFFFFF;--ink:#16233B;--soft:#4A5872;--line:#DDE3EC;--accent:#FFB703;--accentInk:#1B1300;--link:#0B5CAD}
 @media (prefers-color-scheme:dark){:root{--bg:#0F1726;--card:#172238;--ink:#EEF2F8;--soft:#AEB9CC;--line:#2A3956;--accent:#FFB703;--accentInk:#1B1300;--link:#8CC4FF}}
@@ -39,6 +57,9 @@ p.lead{font-size:19px;margin:0 0 20px}
 .stores{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 8px}
 .stores a{display:inline-block;padding:12px 18px;border-radius:12px;background:var(--ink);color:var(--bg);text-decoration:none;font-weight:700}
 .stores a.play{background:var(--accent);color:var(--accentInk)}
+p.updated{font-size:14px;color:var(--soft);margin:0 0 16px}
+.shots{display:flex;gap:12px;margin:24px 0 8px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+.shots img{flex:0 0 calc((100% - 24px)/3);min-width:150px;max-width:100%;height:auto;border-radius:14px;border:1px solid var(--line);scroll-snap-align:start;background:var(--card)}
 .glance{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:6px 20px 10px}
 ul{padding-left:22px;margin:8px 0}
 li{margin:4px 0}
@@ -88,7 +109,7 @@ a{color:var(--link)}</style>
   "https://apps.apple.com/app/id6790425777",
   "https://play.google.com/store/apps/details?id=com.syninasoft.volleyballcoach"
  ],
- "dateModified": "2026-11-15",
+ "dateModified": "2026-11-18",
  "downloadUrl": [
   "https://apps.apple.com/app/id6790425777",
   "https://play.google.com/store/apps/details?id=com.syninasoft.volleyballcoach"
@@ -233,8 +254,10 @@ a{color:var(--link)}</style>
 <main>
 <nav class="langs" aria-label="Languages"><b>English</b> <a href="index.es.html" hreflang="es" lang="es">Español</a> <a href="index.pt.html" hreflang="pt" lang="pt-BR">Português</a> <a href="index.tr.html" hreflang="tr" lang="tr">Türkçe</a> <a href="index.fr.html" hreflang="fr" lang="fr">Français</a> <a href="index.ja.html" hreflang="ja" lang="ja">日本語</a> <a href="index.ko.html" hreflang="ko" lang="ko">한국어</a> <a href="index.de.html" hreflang="de" lang="de">Deutsch</a> <a href="index.it.html" hreflang="it" lang="it">Italiano</a> <a href="index.pl.html" hreflang="pl" lang="pl">Polski</a> <a href="index.ru.html" hreflang="ru" lang="ru">Русский</a></nav>
 <h1>RallyStat: Volleyball Stats</h1>
+<p class="updated">Last updated: <time datetime="2026-11-18">November 18, 2026</time></p>
 <p class="lead">RallyStat by SynIna Soft is an iPhone, iPad and Android app for volleyball stats and score keeping: one tap per rally, offline, no account, pay once. Record each rally with one tap, and the app keeps the score, rotation and player stats for you. For a deeper look, RallyStat exports your match record together with a ready-made analysis prompt. Send it to the AI chat you already use, and the AI breaks down how points were won and lost and what to work on next, with the numbers behind each point.</p>
 <div class="stores"><a href="https://apps.apple.com/us/app/id6790425777">Download on the App Store</a><a class="play" href="https://play.google.com/store/apps/details?id=com.syninasoft.volleyballcoach&amp;hl=en">Get it on Google Play</a></div>
+<div class="shots"><img src="img/en-shot-2.webp" width="480" height="1040" alt="RallyStat — Record together: A second device&#x27;s input merges live" loading="eager" decoding="async"><img src="img/en-shot-4.webp" width="480" height="1040" alt="RallyStat — Stats that tell the story: Points, errors and player impact" loading="lazy" decoding="async"><img src="img/en-shot-6.webp" width="480" height="1040" alt="RallyStat — Rotation &amp; libero, automatic: Positions, serve and subs tracked" loading="lazy" decoding="async"></div>
 <section class="glance"><h2>RallyStat at a glance</h2><ul><li>AI analysis prompt: export your match with a ready-made prompt and paste it into the AI chat you use (free: match totals; Pro: the full rally-by-rally log, including your opponent if you track both teams)</li><li>Co-recording: a second coach records on their own phone and the entries merge live</li><li>One tap per rally: the score, rotation and libero update themselves</li><li>6-player, 9-player and beach (2-player) volleyball</li><li>Recording works offline, with no account and no ads</li><li>Free for up to 2 teams; RallyStat Pro is a one-time purchase, US$14.99 in the US (prices vary by country), no subscription</li><li>iPhone, iPad and Android, in 11 languages</li></ul></section>
 <h2>What is the best volleyball stats app?</h2>
 <p>It depends on what you need after the match. RallyStat is built to be quick to record and easy to read: one tap per rally, and the app works out each player&#x27;s points, errors and net points right away. For a deeper look, it exports your match with an analysis prompt for the AI chat you already use, which explains where points were won and lost with the numbers behind each finding. If you need touch-by-touch scouting of every pass and set, or video analysis, a dedicated scouting tool may suit you better.</p>

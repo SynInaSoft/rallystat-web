@@ -15,11 +15,12 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from l10n import L  # noqa: E402
 from compare_l10n import APPS, GLOBAL, LOCAL, C  # noqa: E402
+from media import captions, SHOT_W  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 APP = os.path.join(os.path.dirname(ROOT), 'volleyball-coach')
 BASE = 'https://syninasoft.github.io/rallystat-web/'
-TODAY = '2026-11-15'  # 소개 페이지 갱신일(sitemap lastmod·JSON-LD dateModified)
+TODAY = '2026-11-18'  # 소개 페이지 갱신일(sitemap lastmod·JSON-LD dateModified)
 CMP_DATE = '2026-10-27'  # 비교 페이지는 그대로
 PRINT_URL = 'https://syninasoft.github.io/rallyboard-web/volleyball-rotation-sheets.html'
 ASC_ID = '6790425777'
@@ -55,6 +56,58 @@ def cmp_name(code):
 
 def cmp_url(code):
     return BASE + cmp_name(code)
+
+
+# 화면에 보이는 '마지막 수정일'(11-18). (머리말, 월 이름 12개, 날짜 형식)
+_M = {
+    'en': ('Last updated', 'January February March April May June July August September October November December', '{m} {d}, {y}'),
+    'es': ('Última actualización', 'enero febrero marzo abril mayo junio julio agosto septiembre octubre noviembre diciembre', '{d} de {m} de {y}'),
+    'pt': ('Última atualização', 'janeiro fevereiro março abril maio junho julho agosto setembro outubro novembro dezembro', '{d} de {m} de {y}'),
+    'tr': ('Son güncelleme', 'Ocak Şubat Mart Nisan Mayıs Haziran Temmuz Ağustos Eylül Ekim Kasım Aralık', '{d} {m} {y}'),
+    'fr': ('Dernière mise à jour', 'janvier février mars avril mai juin juillet août septembre octobre novembre décembre', '{d} {m} {y}'),
+    'ja': ('最終更新日', '', '{y}年{n}月{d}日'),
+    'ko': ('마지막 수정', '', '{y}년 {n}월 {d}일'),
+    'de': ('Zuletzt aktualisiert', 'Januar Februar März April Mai Juni Juli August September Oktober November Dezember', '{d}. {m} {y}'),
+    'it': ('Ultimo aggiornamento', 'gennaio febbraio marzo aprile maggio giugno luglio agosto settembre ottobre novembre dicembre', '{d} {m} {y}'),
+    'pl': ('Ostatnia aktualizacja', 'stycznia lutego marca kwietnia maja czerwca lipca sierpnia września października listopada grudnia', '{d} {m} {y}'),
+    'ru': ('Последнее обновление', 'января февраля марта апреля мая июня июля августа сентября октября ноября декабря', '{d} {m} {y} г.'),
+}
+
+
+def updated_line(code):
+    head, months, fmt = _M[code]
+    y, n, d = (int(x) for x in TODAY.split('-'))
+    m = months.split()[n - 1] if months else ''
+    sep = '：' if code == 'ja' else (' : ' if code == 'fr' else ': ')
+    return '<p class="updated">%s%s<time datetime="%s">%s</time></p>' % (
+        esc(head), sep, TODAY, esc(fmt.format(y=y, n=n, d=d, m=m)))
+
+
+OG_W, OG_H = 1024, 500  # 스크린샷/play/<lang>/feature-graphic.png
+OG_LOCALE = {'en': 'en_US', 'es': 'es_ES', 'pt': 'pt_BR', 'tr': 'tr_TR', 'fr': 'fr_FR', 'ja': 'ja_JP',
+             'ko': 'ko_KR', 'de': 'de_DE', 'it': 'it_IT', 'pl': 'pl_PL', 'ru': 'ru_RU'}
+
+
+def share_tags(code, alt):
+    """og:image·twitter:card. alt = 공유 이미지 설명(피처 그래픽 = 앱 이름 + 한 줄)."""
+    img = BASE + 'img/og-%s.jpg' % code
+    others = ''.join('\n<meta property="og:locale:alternate" content="%s">' % OG_LOCALE[x[0]]
+                     for x in LANGS if x[0] != code)
+    return ('<meta property="og:locale" content="%s">%s\n'
+            '<meta property="og:image" content="%s">\n'
+            '<meta property="og:image:width" content="%d">\n<meta property="og:image:height" content="%d">\n'
+            '<meta property="og:image:alt" content="%s">\n'
+            '<meta name="twitter:card" content="summary_large_image">\n'
+            '<meta name="twitter:image" content="%s">\n<meta name="twitter:image:alt" content="%s">'
+            % (OG_LOCALE[code], others, img, OG_W, OG_H, esc(alt), img, esc(alt)))
+
+
+def shots_html(code):
+    h = round(2796 * SHOT_W / 1290)
+    figs = ''.join('<img src="img/%s-shot-%d.webp" width="%d" height="%d" alt="%s" loading="%s" decoding="async">'
+                   % (code, n, SHOT_W, h, esc(alt), 'eager' if i == 0 else 'lazy', )
+                   for i, (n, alt) in enumerate(captions()[code]))
+    return '<div class="shots">%s</div>' % figs
 
 
 def esc(s):
@@ -96,6 +149,9 @@ p.lead{font-size:19px;margin:0 0 20px}
 .stores{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 8px}
 .stores a{display:inline-block;padding:12px 18px;border-radius:12px;background:var(--ink);color:var(--bg);text-decoration:none;font-weight:700}
 .stores a.play{background:var(--accent);color:var(--accentInk)}
+p.updated{font-size:14px;color:var(--soft);margin:0 0 16px}
+.shots{display:flex;gap:12px;margin:24px 0 8px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch}
+.shots img{flex:0 0 calc((100% - 24px)/3);min-width:150px;max-width:100%;height:auto;border-radius:14px;border:1px solid var(--line);scroll-snap-align:start;background:var(--card)}
 .glance{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:6px 20px 10px}
 ul{padding-left:22px;margin:8px 0}
 li{margin:4px 0}
@@ -169,14 +225,17 @@ def render(lc):
     out.append('<meta property="og:title" content="%s">' % esc(t['title']))
     out.append('<meta property="og:description" content="%s">' % esc(t['meta']))
     out.append('<meta property="og:url" content="%s">' % url(code))
+    out.append(share_tags(code, 'RallyStat — ' + copy['title']))
     out.append('<meta name="color-scheme" content="light dark">')
     out.append('<style>%s</style>' % CSS.strip())
     out.append(jsonld(code, t, copy, lead))
     out.append('</head>\n<body>\n<main>')
     out.append('<nav class="langs" aria-label="%s">%s</nav>' % (esc(t['langs']), nav))
     out.append('<h1>%s</h1>' % esc(copy['title']))
+    out.append(updated_line(code))
     out.append('<p class="lead">%s</p>' % esc(lead))
     out.append(stores)
+    out.append(shots_html(code))
     out.append('<section class="glance"><h2>%s</h2><ul>%s</ul></section>'
                % (esc(t['glance_h']), ''.join('<li>%s</li>' % esc(g) for g in t['glance'])))
     for i, (q, a) in enumerate(t['qa']):
@@ -245,8 +304,11 @@ def render_compare(lc):
            '<meta name="description" content="%s">' % esc(c['meta']),
            '<link rel="canonical" href="%s">' % cmp_url(code), alts,
            '<meta property="og:type" content="article">',
+           '<meta property="og:site_name" content="RallyStat">',
+           '<meta property="og:url" content="%s">' % cmp_url(code),
            '<meta property="og:title" content="%s">' % esc(c['title']),
            '<meta property="og:description" content="%s">' % esc(c['meta']),
+           share_tags(code, 'RallyStat — ' + store_copy(locale)['title']),
            '<meta name="color-scheme" content="light dark">',
            '<style>%s%s</style>' % (CSS.strip(), CMP_CSS),
            '<script type="application/ld+json">\n%s\n</script>'
