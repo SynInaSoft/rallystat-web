@@ -225,7 +225,7 @@ def render(lc):
     out.append('<meta property="og:title" content="%s">' % esc(t['title']))
     out.append('<meta property="og:description" content="%s">' % esc(t['meta']))
     out.append('<meta property="og:url" content="%s">' % url(code))
-    out.append(share_tags(code, 'RallyStat — ' + copy['title']))
+    out.append(share_tags(code, copy['title']))
     out.append('<meta name="color-scheme" content="light dark">')
     out.append('<style>%s</style>' % CSS.strip())
     out.append(jsonld(code, t, copy, lead))
@@ -308,7 +308,7 @@ def render_compare(lc):
            '<meta property="og:url" content="%s">' % cmp_url(code),
            '<meta property="og:title" content="%s">' % esc(c['title']),
            '<meta property="og:description" content="%s">' % esc(c['meta']),
-           share_tags(code, 'RallyStat — ' + store_copy(locale)['title']),
+           share_tags(code, store_copy(locale)['title']),
            '<meta name="color-scheme" content="light dark">',
            '<style>%s%s</style>' % (CSS.strip(), CMP_CSS),
            '<script type="application/ld+json">\n%s\n</script>'

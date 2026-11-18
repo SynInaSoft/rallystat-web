@@ -47,7 +47,8 @@ def captions():
             main = re.sub(r'\*', '', main).strip()
             if lang == 'ja':  # 일본어 캡션의 줄바꿈용 공백 제거
                 main, sub = main.replace(' ', ''), sub.replace(' ', '')
-            rows.append((n, 'RallyStat — %s: %s' % (main, sub.strip())))
+            dot = '。' if lang == 'ja' else '. '
+            rows.append((n, 'RallyStat: %s%s%s' % (main, dot, sub.strip())))
         out[lang] = rows
     return out
 
